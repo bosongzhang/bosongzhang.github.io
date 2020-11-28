@@ -1,0 +1,323 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* -------
+ Mobile(Default)
+------- */
+
+/* ----- Typography ----- */
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+p {
+  font-weight: 400;
+}
+
+h2,
+h3 {
+  font-weight: 700;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.875rem;
+  line-height: 3rem;
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+  line-height: 1.8rem;
+}
+
+ul,
+p,
+span {
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+
+a {
+  font-size: 1rem;
+}
+
+.dark {
+  color: #191716;
+}
+
+h2.dark {
+  color: #222E50;
+}
+
+.light {
+  color: #fff;
+}
+
+.left-h2 {
+  text-align: left;
+}
+
+.expe-comp h3,
+.expe-comp p,
+.edu-comp h3,
+.edu-comp p {
+  margin-bottom: 0;
+}
+
+.edu-comp {
+  margin-bottom: 1.5em;
+}
+
+
+/* Nav */
+
+.header-title {
+  display: flex;
+  flex-direction: row;
+  padding: 1.5em 0;
+  justify-content: space-between;
+  max-width: 90%;
+  margin: auto;
+}
+
+.header-icon {
+  align-self: center;
+}
+
+.index-nav {
+  display: none;
+}
+
+.index-nav-show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2em;
+}
+
+.index-nav a {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 1.5em;
+}
+
+.nav-current {
+  display: block;
+}
+
+.nav-current,
+nav a:hover,
+nav a:focus {
+  box-shadow: inset 0 -2px 0 #fff;
+}
+
+.close-icon {
+  padding: 3em 0 1.5em 0;
+}
+
+.close-icon:hover,
+.close-icon:focus {
+  box-shadow: none;
+}
+
+
+/* ----- Layout ----- */
+
+img {
+  width: 100%;
+}
+
+.wrapper {
+  padding: 3em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header, footer {
+  background-color: #222E50;
+}
+
+.center {
+  text-align: center;
+}
+
+.about .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience,
+.online-profile {
+  background-color: #ECE7E7;
+}
+
+.online-profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.online-profile a:last-child {
+  padding-top: 1.5em;
+}
+
+.pub-comp {
+  margin-bottom: 2em;
+}
+
+.primary-btn {
+  padding: 1em 2em;
+  background-color: #CC3C14;
+  color: #fff;
+  align-self: center;
+  margin-top: 1.5em;
+  text-decoration: none;
+}
+
+.primary-btn:hover,
+.primary-btn:focus {
+  background-color: #942000;
+}
+
+.temp-fb-img {
+  max-width: 550px;
+}
+
+.recent-research-comp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2em;
+}
+
+
+/* -------
+Web (min-width:760px)
+------- */
+
+@media (min-width: 760px) {
+
+  /* ----- Typography ----- */
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  ul,
+  p,
+  span {
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
+
+  a {
+    font-size: 1.125rem;
+  }
+
+  /* Header */
+  .header-icon {
+    display: none;
+  }
+  .header-title h1{
+    margin: auto;
+  }
+  .index-nav {
+    display: flex;
+    margin: 0 auto;
+    max-width: 900px;
+    padding-bottom: 3em;
+    justify-content: space-evenly;
+  }
+  .nav-current {
+    display: inline;
+  }
+  .close-icon {
+    display: none;
+  }
+
+  /* Experience */
+  .experience .wrapper {
+    display: grid;
+    grid-template: auto auto /
+                   35% 1em auto auto;
+    grid-template-areas:
+    "title title title title"
+    "left 0 right right";
+  }
+  .experience .wrapper .title {
+    grid-area: title;
+    padding-bottom: 1em;
+  }
+  .experience .wrapper .left {
+    grid-area: left;
+  }
+  .experience .wrapper .right {
+    grid-area: right;
+    margin: 0;
+  }
+
+  /* Education */
+  .education .wrapper .edu-comp {
+    display: grid;
+    grid-template: auto /
+                   35% 3em auto auto;
+    grid-template-areas:
+    "left 0 right right";
+  }
+  .edu-comp .left {
+    grid-area: left;
+  }
+  .edu-comp .right {
+    grid-area: right;
+  }
+
+  /* -- Publications page & Contact me page -- */
+  .pub-page,
+  .contact-page {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .pub-comp {
+    margin-bottom: 3em;
+  }
+  .online-profile {
+    margin-top: 1.5em;
+    margin-right: 0;
+  }
+  .online-h2 {
+    text-align: left;
+  }
+
+}

@@ -154,6 +154,14 @@ img {
   margin: 0 auto;
 }
 
+.wrapper_a {
+  padding: 3em;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ECE7E7;
+}
+
+
 header, footer {
   background-color: #222E50;
 }

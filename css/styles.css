@@ -150,11 +150,19 @@ img {
 }
 
 .wrapper {
-  padding: 3em;
-  max-width: 800px;
+  padding: 2em;
+  max-width: 600px;
   margin: 0 auto;
+  flex-basis: 50%;
 }
 
+.content {
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  padding: 0 2em 2em 2em;
+}
 
 
 header, footer {
@@ -203,7 +211,9 @@ header, footer {
 }
 
 .temp-fb-img {
-  max-width: 550px;
+  width: 1200px; /* Set the width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 800px;
 }
 
 .recent-research-comp {

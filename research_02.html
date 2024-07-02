@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Research</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-title">
+      <a href="javascript:void(0);" class="header-icon" onclick="openHamburgerMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="22.667" viewBox="0 0 25 22.667"><defs><style>.a{fill:#fff;}</style></defs><path class="a" d="M3,28.667H28V24.889H3Zm0-9.444H28V15.444H3ZM3,6V9.778H28V6Z" transform="translate(-3 -6)"/></svg>
+      </a>
+      <h1>Bosong Zhang</h1>
+    </div>
+
+    <nav class="index-nav" id="top-nav">
+      <a href="index.html">Home</a>
+      <a href="#" class="nav-current">Research</a>
+      <!-- <a href="publications.html">Publications</a> -->
+      <a href="contact_me.html">Contact Me</a>
+      <a href="#" class="close-icon" onclick="openHamburgerMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31"><defs><style>.a{fill:#fff;}</style></defs><path class="a" d="M36,8.122,32.878,5,20.5,17.378,8.122,5,5,8.122,17.378,20.5,5,32.878,8.122,36,20.5,23.622,32.878,36,36,32.878,23.622,20.5Z" transform="translate(-5 -5)"/></svg>
+      </a>
+    </nav>
+  </header>
+
+<main>
+
+
+    <section class="content">
+
+    <div class="wrapper">
+      <div class="recent-research-comp">
+        <h2 class="dark">Understanding the SST pattern effect in AM4 from a Green's function perspective</h2>
+
+          <p style="text-align: justify;"> We explores how regional sea surface temperature (SST) changes affect global radiative feedbacks using the Green's function (GF) approach. Using AM4 and CM4 models, We find that GF derived from idealized SST warming experiments can replicate global and regional responses in AM4. However, replicating the magnitude of responses from CM4's SST patterns remains a challenge. Decomposing SST patterns into global-mean values and anomalies helps reduce biases. Factors like SST perturbation amplitude, integration time, and confidence levels in significance tests affect GF performance.</p>
+
+          <p style="text-align: justify;">Some related data can be found <a href="https://zenodo.org/record/7407417#.Y9aRA-yZMUE" target="_blank">Zenodo</a> and here <a href="https://github.com/bosongzhang/AM4_GF" target="_blank">GitHub</a>.</p>
+
+      </div>
+    </div>
+
+
+    </section>
+
+    <section class="slideshow-container">
+        <div class="slides">
+                <div class="slide">
+                <img src="images/gf.sensitivity.png" alt="Slide 1">
+                </div>
+                
+                <div class="slide">
+                <img src="images/gf.sensitivity.png" alt="Slide 2">
+                </div>
+
+            </div>
+        </div>
+            <div class="dots-container">
+                <span class="dot"></span>
+                <span class="dot"></span>
+
+        </div>
+    
+        <div class="container">
+            <div class="related-publications">
+                <h2>Related Publications</h2>
+                <ul>
+                    <li><a href="https://journals.ametsoc.org/view/journals/clim/36/4/JCLI-D-22-0024.1.xml" target="_blank">Zhang, B., M. Zhao, and Z. Tan, 2023: Using a Green’s Function Approach to Diagnose the Pattern Effect in GFDL AM4 and CM4. J. Climate, 36, 1105–1124</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <button onclick="window.location.href='research.html'">Go Back</button>
+
+</main>
+
+  <script src="js/myScript.js"></script>
+
+</body>
+
+</html>

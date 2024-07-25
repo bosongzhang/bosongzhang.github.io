@@ -6,6 +6,7 @@
   <title>Research</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <header>
@@ -37,8 +38,9 @@
     <section class="about">
       <div class="wrapper">
         
+
         <div class="recent-research-comp">
-          <h2 class="dark">Precipitation Diurnal Cycle <button onclick="window.location.href='research.html'">Go Back</button></h2>
+          <h2 class="dark">Precipitation Diurnal Cycle</h2>
           <p class="dark"> <b>Overview</b>: Global climate models often struggle with accurately simulating daily convection cycles, particularly over land, where precipitation peaks are frequently predicted too early. A new convective closure approach has been developed to address this issue by incorporating the role of shallow convection in balancing boundary layer changes throughout the day. This advancement has led to a marked improvement in the representation of diurnal patterns in both atmosphere-only and coupled ocean-atmosphere models.</p>
         
           <p class="dark">The animation below shows CAPE tendency due to shallow convection (left) and CAPE tendency due to non-convective PBL processes (right). They tend to cancel each other out. </p>
@@ -47,6 +49,35 @@
 
         <img src="images/animation1.gif" alt="" class="temp-fb-img"> 
 
+        <div class="recent-research-comp">
+          <p class="dark">In climate models, quasi-equilibrium assumes that CAPE changes induced by non-convective processes (e.g., large-scale advection, surface fluxes, radiative cooling, and eddy diffusion) are approximately balanced by CAPE changes due to convective processes</p>
+
+          <p class="dark">
+            \[
+            \left( \frac{\partial \text{CAPE}}{\partial t} \right) = \left( \frac{\partial \text{CAPE}}{\partial t} \right)_{\text{nc,BL}} + \left( \frac{\partial \text{CAPE}}{\partial t} \right)_{\text{nc,FT}} + \left( \frac{\partial \text{CAPE}}{\partial t} \right)_{\text{deep}} + \left( \frac{\partial \text{CAPE}}{\partial t} \right)_{\text{shal}}
+            \]
+          </p>
+
+
+          <p class="dark">Previouly, only deep convection is considered, which means</p>
+          <p>
+            \[
+            \left(\frac{\partial \text{CAPE}}{\partial t}\right)_{\text{deep}} = -\frac{\text{CAPE} - \text{CAPE}_0}{\tau}
+            \]
+          </p>
+
+          <p class="dark">Here, we need to consider the contribution from shallow convection, which leads to</p>
+          <p>
+            \[
+            \left(\frac{\partial \text{CAPE}}{\partial t}\right)_{\text{deep}} = -\frac{\text{CAPE} - \text{CAPE}_0}{\tau} {\color{red}- \left(\frac{\partial \text{CAPE}}{\partial t}\right)_{\text{shal}}}
+            \]
+          </p>
+
+          <p> where \[ \text{CAPE}_0\] is a reference value toward which CAPE, having evolved by non-convective processes since its last adjustment due to convection (the beginning of a model time step in AM4), relaxes over an extended time τ. The value of τ is typically tuned to multiple hours in models.</p>
+
+
+         </div>
+          
         <div class="recent-research-comp">
           <p class="dark"> <b>Results</b>: This adjustment delays peak land precipitation by approximately three hours and reduces diurnal phase biases by 50% compared to satellite observations. The figure below compares the original method (standard AM4), the new closure approach (relax QE D+S), and satellite observations (IMERG) for total precipitation, as well as a decomposition of convective and large-scale precipitation.</p>
     
@@ -76,7 +107,7 @@
       <div class="related-publications">
         <h2>Related Publications</h2>
         <ul>
-          <li><a href="https://essopenarchive.org/users/535851/articles/722043-improved-precipitation-diurnal-cycle-in-gfdl-climate-models-with-non-equilibrium-convection" target="_blank">Bosong Zhang, Leo J. Donner, Ming Zhao, et al. Improved Precipitation Diurnal Cycle in GFDL Climate Models with Non-Equilibrium Convection. ESS Open Archive. March 13, 2024.</a></li>
+          <li><a href="https://essopenarchive.org/users/535851/articles/722043-improved-precipitation-diurnal-cycle-in-gfdl-climate-models-with-non-equilibrium-convection" target="_blank" class="dark">Bosong Zhang, Leo J. Donner, Ming Zhao, et al. Improved Precipitation Diurnal Cycle in GFDL Climate Models with Non-Equilibrium Convection. ESS Open Archive. March 13, 2024.</a></li>
         </ul>
       </div>
     </div>

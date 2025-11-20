@@ -1,76 +1,115 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Research</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <title>SST Pattern Effect | Bosong Zhang</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+
+  <!-- Header -->
   <header>
-    <div class="header-title">
-      <a href="javascript:void(0);" class="header-icon" onclick="openHamburgerMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="22.667" viewBox="0 0 25 22.667">
-          <defs><style>.a{fill:#fff;}</style></defs>
-          <path class="a" d="M3,28.667H28V24.889H3Zm0-9.444H28V15.444H3ZM3,6V9.778H28V6Z" transform="translate(-3 -6)"/>
-        </svg>
-      </a>
-      <h1>Bosong Zhang</h1>
+    <div class="container header-inner">
+      <h1 class="site-title"><a href="index.html">Bosong Zhang</a></h1>
+
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="contact_me.html">Contact</a>
+      </nav>
     </div>
-    <nav class="index-nav" id="top-nav">
-      <a href="index.html">Home</a>
-      <a href="research.html">Research</a>
-      <a href="contact_me.html">Contact Me</a>
-      <a href="#" class="close-icon" onclick="openHamburgerMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
-          <defs><style>.a{fill:#fff;}</style></defs>
-          <path class="a" d="M36,8.122,32.878,5,20.5,17.378,8.122,5,5,8.122,17.378,20.5,5,32.878,8.122,36,20.5,23.622,32.878,36,36,32.878,23.622,20.5Z" transform="translate(-5 -5)"/>
-        </svg>
-      </a>
-    </nav>
   </header>
+
   <main>
-    <section class="about">
-      <div class="wrapper">
-        
-        <div class="recent-research-comp">
-          <h2 class="dark">The SST pattern effect in AM4</h2>
-          <p class="dark"> <b>Overview</b>: We explores how regional sea surface temperature (SST) changes affect global radiative feedbacks using the Green's function (GF) approach. Using AM4 and CM4 models, We find that GF derived from idealized SST warming experiments can replicate global and regional responses in AM4. However, replicating the magnitude of responses from CM4's SST patterns remains a challenge. Decomposing SST patterns into global-mean values and anomalies helps reduce biases. Factors like SST perturbation amplitude, integration time, and confidence levels in significance tests affect GF performance. Some related data can be found <a href="https://zenodo.org/record/7407417#.Y9aRA-yZMUE" target="_blank">Zenodo</a> and here <a href="https://github.com/bosongzhang/AM4_GF" target="_blank">GitHub</a>. </p>
-        
-        
-          <img src="images/gf.sensitivity.png" alt="" class="temp-fb-img">
+    <article class="research-detail">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="research.html" class="breadcrumb-link">Back to Research</a>
         </div>
-        
+        <header class="article-header" style="margin-bottom: 2rem; text-align: center;">
+          <h1>The SST Pattern Effect in AM4</h1>
+        </header>
 
+        <section class="content-section">
+          <p><b>Overview</b>: We explore how regional sea surface temperature (SST) changes affect global radiative
+            feedbacks using the Green's function (GF) approach. Using AM4 and CM4 models, we find that GF derived from
+            idealized SST warming experiments can replicate global and regional responses in AM4. However, replicating
+            the magnitude of responses from CM4's SST patterns remains a challenge. Decomposing SST patterns into
+            global-mean values and anomalies helps reduce biases. Factors like SST perturbation amplitude, integration
+            time, and confidence levels in significance tests affect GF performance. Some related data can be found on
+            <a href="https://zenodo.org/record/7407417#.Y9aRA-yZMUE" target="_blank">Zenodo</a> and <a
+              href="https://github.com/bosongzhang/AM4_GF" target="_blank">GitHub</a>.
+          </p>
 
-        <div class="recent-research-comp">
-          <h2 class="dark">Large Spread across models</h2>
-          <p class="dark"> <b>Overview</b>: </p>
-        
-          <img src="images/jame22028-fig-0002-m.jpg" alt="" class="temp-fb-img">
+          <div class="figure-container">
+            <img src="images/gf.sensitivity.png" alt="Green's Function Sensitivity" class="research-figure">
+          </div>
+
+          <h2 style="margin-top: 3rem;">Large Spread Across Models</h2>
+          <p><b>Overview</b>: [Content to be added]</p>
+
+          <div class="figure-container">
+            <img src="images/jame22028-fig-0002-m.jpg" alt="Model Spread" class="research-figure">
+          </div>
+        </section>
+
+        <div class="related-publications" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee;">
+          <h3>Related Publications</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li
+              style="margin-bottom: 1rem; padding: 1rem; background: #fff; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
+              <a href="https://journals.ametsoc.org/view/journals/clim/36/4/JCLI-D-22-0024.1.xml" target="_blank">Zhang,
+                B., M. Zhao, and Z. Tan, 2023: Using a Green’s Function Approach to Diagnose the Pattern Effect in GFDL
+                AM4 and CM4. J. Climate, 36, 1105–1124</a>
+            </li>
+            <li
+              style="margin-bottom: 1rem; padding: 1rem; background: #fff; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
+              <a href="https://journals.ametsoc.org/view/journals/clim/aop/JCLI-D-23-0539.1/JCLI-D-23-0539.1.xml"
+                target="_blank">Quan, H., B. Zhang, C. Wang, and S. Fueglistaler, 2024: Non-linear radiative response to
+                patterned global warming due to convection aggregation and non-linear tropical dynamics. J. Climate,
+                https://doi.org/10.1175/JCLI-D-23-0539.14</a>
+            </li>
+            <li
+              style="margin-bottom: 1rem; padding: 1rem; background: #fff; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
+              <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023MS003700"
+                target="_blank">Bloch-Johnson, J., Rugenstein, M. A. A., Alessi, M. J., Proistosescu, C., Zhao, M.,
+                Zhang, B., et al. (2024). The green's function model intercomparison project (GFMIP) protocol. Journal
+                of Advances in Modeling Earth Systems, 16, e2023MS003700. https://doi.org/10.1029/2023MS003700</a>
+            </li>
+          </ul>
         </div>
-        
+
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="research.html" class="btn btn-outline"
+            style="color: var(--color-brand); border-color: var(--color-brand);">Back to Research</a>
+        </div>
 
       </div>
-    </section>
-
-
-
-    <div class="container">
-      <div class="related-publications">
-        <h2>Related Publications</h2>
-        <ul>
-          <li><a href="https://journals.ametsoc.org/view/journals/clim/36/4/JCLI-D-22-0024.1.xml" target="_blank">Zhang, B., M. Zhao, and Z. Tan, 2023: Using a Green’s Function Approach to Diagnose the Pattern Effect in GFDL AM4 and CM4. J. Climate, 36, 1105–1124</a></li>
-
-          <li><a href="https://journals.ametsoc.org/view/journals/clim/aop/JCLI-D-23-0539.1/JCLI-D-23-0539.1.xml" target="_blank">Quan, H., B. Zhang, C. Wang, and S. Fueglistaler, 2024: Non-linear radiative response to patterned global warming due to convection aggregation and non-linear tropical dynamics. J. Climate, https://doi.org/10.1175/JCLI-D-23-0539.14</a></li>
-          
-          <li><a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2023MS003700" target="_blank">Bloch-Johnson, J., Rugenstein, M. A. A., Alessi, M. J., Proistosescu, C., Zhao, M., Zhang, B., et al. (2024). The green's function model intercomparison project (GFMIP) protocol. Journal of Advances in Modeling Earth Systems, 16, e2023MS003700. https://doi.org/10.1029/2023MS003700</a></li>
-        </ul>
-      </div>
-    </div>
-    <button onclick="window.location.href='research.html'">Go Back</button>
+    </article>
   </main>
-  <script src="js/myScript.js"></script>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bosong Zhang. Last updated: 08/22/2025</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
+
 </html>

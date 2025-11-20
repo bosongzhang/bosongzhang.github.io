@@ -1,119 +1,137 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Research</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <title>Radiation-Convection Interactions | Bosong Zhang</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+
+  <!-- Header -->
   <header>
-    <div class="header-title">
-      <a href="javascript:void(0);" class="header-icon" onclick="openHamburgerMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="22.667" viewBox="0 0 25 22.667">
-          <defs><style>.a{fill:#fff;}</style></defs>
-          <path class="a" d="M3,28.667H28V24.889H3Zm0-9.444H28V15.444H3ZM3,6V9.778H28V6Z" transform="translate(-3 -6)"/>
-        </svg>
-      </a>
-      <h1>Bosong Zhang</h1>
+    <div class="container header-inner">
+      <h1 class="site-title"><a href="index.html">Bosong Zhang</a></h1>
+
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="contact_me.html">Contact</a>
+      </nav>
     </div>
-    <nav class="index-nav" id="top-nav">
-      <a href="index.html">Home</a>
-      <a href="research.html">Research</a>
-      <a href="contact_me.html">Contact Me</a>
-      <a href="#" class="close-icon" onclick="openHamburgerMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
-          <defs><style>.a{fill:#fff;}</style></defs>
-          <path class="a" d="M36,8.122,32.878,5,20.5,17.378,8.122,5,5,8.122,17.378,20.5,5,32.878,8.122,36,20.5,23.622,32.878,36,36,32.878,23.622,20.5Z" transform="translate(-5 -5)"/>
-        </svg>
-      </a>
-    </nav>
   </header>
+
   <main>
-    
-
-
-    <section class="about">
-      <div class="wrapper">
-        
-
-<!--         <div class="recent-research-comp">
-          <h2 class="dark">The SST pattern effect in AM4</h2>
-          <p class="dark"> <b>Overview</b>: We explores how regional sea surface temperature (SST) changes affect global radiative feedbacks using the Green's function (GF) approach. Using AM4 and CM4 models, We find that GF derived from idealized SST warming experiments can replicate global and regional responses in AM4. However, replicating the magnitude of responses from CM4's SST patterns remains a challenge. Decomposing SST patterns into global-mean values and anomalies helps reduce biases. Factors like SST perturbation amplitude, integration time, and confidence levels in significance tests affect GF performance. Some related data can be found <a href="https://zenodo.org/record/7407417#.Y9aRA-yZMUE" target="_blank">Zenodo</a> and here <a href="https://github.com/bosongzhang/AM4_GF" target="_blank">GitHub</a>. </p>
-        
-        
-          <img src="images/gf.sensitivity.png" alt="" class="temp-fb-img">
+    <article class="research-detail">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="research.html" class="breadcrumb-link">Back to Research</a>
         </div>
-         -->
+        <header class="article-header" style="margin-bottom: 2rem; text-align: center;">
+          <h1>Radiation-Convection Interactions in Tropical Cyclones</h1>
+        </header>
 
+        <section class="content-section">
+          <p><b>Overview</b>: To examine the role of radiation-convection interactions in the development of Tropical
+            Cyclones (TCs), mechanism denial experiments are conducted using a general circulation model.</p>
 
-        <div class="recent-research-comp">
-          <h2 class="dark">Radiation-Convection Interactions in the Development of Tropical Cyclones</h2>
+          <div class="figure-container">
+            <img src="images/full-JCLI-D-22-0199.1-f1.jpg" alt="Track Density Comparison" class="research-figure">
+            <p class="caption" style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--color-text-muted);">Track
+              density in Control run (left), ClimRad run (middle), and difference (right).</p>
+          </div>
 
-          <p class="dark"> <b>Overview</b>: This figure shows the track density in the Control run (<b>with</b> radiative interactions; left), the ClimRad run (<b>without</b> radiative interactions; middle) and their difference (right). Reduced TC frequency without radiative interactions</p>
+          <p>This figure shows vertical cross sections of azimuthally averaged and density-weighted individual variables
+            for longwave radiation, shortwave radiation, and moist static energy during different TC intensities.</p>
 
-          <img src="images/full-JCLI-D-22-0199.1-f1.jpg" alt="" class="temp-fb-img">
-          <p class="dark"> This figure shows Vertical cross sections of azimuthally averaged and density-weighted individual variables for the longwave radiation, shortwave radiatoin, and moist static energy during different TC intensities.</p>
+          <div class="figure-container">
+            <img src="images/fig03.tc.png" alt="Vertical Cross Sections" class="research-figure">
+          </div>
 
+          <p>TC frequency is reduced without radiative interactions. The figure below shows the track density in the
+            Control run (with radiative interactions), the ClimRad run (without radiative interactions), and their
+            difference.</p>
 
+          <div class="figure-container">
+            <img src="images/fig08.tc.png" alt="TC Duration" class="research-figure">
+            <p class="caption" style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--color-text-muted);">Comparison
+              of TC duration (Control minus ClimRad).</p>
+          </div>
 
-          <p class="dark"> To examine the role of radiation-convection interactions in the development of TCs, mechanism denial experiments are conduected using a general circulation model.</p>
-          <img src="images/fig03.tc.png" alt="" class="temp-fb-img">
-          <p class="dark"> This figure shows the track density in the Control run (<b>with</b> radiative interactions; left), the ClimRad run (<b>without</b> radiative interactions; middle) and their difference (right). TC frequency is reduced without radiative interactions.</p>
+          <p>Reduced degree of aggregation and extreme precipitation without radiative interactions. This figure
+            compares annual maximum precipitation between the Control and ClimRad runs.</p>
+
+          <div class="figure-container">
+            <img src="images/fig.map.rx1day.control.clima.png" alt="Annual Maximum Precipitation"
+              class="research-figure">
+          </div>
+
+          <h2 style="margin-top: 3rem;">Radiative Feedbacks Associated with the MJO</h2>
+          <p>This study uses radiative kernels to diagnose radiative feedbacks associated with the MJO. As an important
+            driver of tropical intraseasonal variability, the MJO can be viewed as a kind of convective aggregation
+            which involves interactions between clouds, circulation, radiation, and water vapor.</p>
+
+          <div class="figure-container">
+            <img src="images/p_figure1_abcde.png" alt="MJO Radiative Feedbacks" class="research-figure">
+          </div>
+        </section>
+
+        <div class="related-publications" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee;">
+          <h3>Related Publications</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li
+              style="margin-bottom: 1rem; padding: 1rem; background: #fff; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
+              <a href="https://journals.ametsoc.org/view/journals/clim/aop/JCLI-D-20-0574.1/JCLI-D-20-0574.1.xml"
+                target="_blank">Zhang, B., B. J. Soden, G. A. Vecchi, and W. Yang, 2021: The Role of Radiative
+                Interactions in Tropical Cyclone Development under Realistic Boundary Conditions. J. Climate, 34,
+                2079–2091</a>
+            </li>
+            <li
+              style="margin-bottom: 1rem; padding: 1rem; background: #fff; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
+              <a href="https://journals.ametsoc.org/view/journals/clim/36/16/JCLI-D-22-0449.1.xml"
+                target="_blank">Hsieh, T., B. Zhang, W. Yang, G. A. Vecchi, M. Zhao, B. J. Soden, and C. Wang, 2023: The
+                Influence of Large-Scale Radiation Anomalies on Tropical Cyclone Frequency. J. Climate, 36,
+                5431–5441</a>
+            </li>
+            <li
+              style="margin-bottom: 1rem; padding: 1rem; background: #fff; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
+              <a href="https://journals.ametsoc.org/view/journals/clim/36/4/JCLI-D-22-0199.1.xml" target="_blank">Zhang,
+                B., B. J. Soden, and G. A. Vecchi, 2023: A Vertically Resolved Analysis of Radiative Feedbacks on Moist
+                Static Energy Variance in Tropical Cyclones. J. Climate, 36, 1125–1141</a>
+            </li>
+          </ul>
         </div>
-        
 
-        <div class="recent-research-comp">
-
-
-          <img src="images/fig08.tc.png" alt="" class="temp-fb-img">
-          <p class="dark">  Reduced TC lifetime without radiative interactions This figure compares TC duration (Control minus ClimRad). The blue (red) bars in each subplot indicate that there are more short-lived (fewer long-lived) TCs in the ClimRad run.</p>
-        </div>
-        
-
-        <div class="recent-research-comp">
-          <p class="dark"> Reduced the degree of aggregation and extreme precipitation without radiative interactions This figure compares annual maximum precipitation between the Control and ClimRad runs.</p>
-
-          <img src="images/fig.map.rx1day.control.clima.png" alt="" class="temp-fb-img">
-        </div>
-        
-
-        <div class="recent-research-comp">
-          <h2 class="dark">Radiative feedbacks associated with the MJO</h2>
-
-          <p align="justify">This study uses radiative kernels [<a href="https://journals.ametsoc.org/jcli/article/21/14/3504/31817" target="_blank">Soden et al. (2008)</a>; <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018JD029021?casa_token=qCaTzTplBVAAAAAA%3AyaxB9HzF_uNl8FVJEjH3dNpAwc2HJ-5aflXsyMdyS2BQcfDSvrEcbFWnpfbbZ1NIgALBvEKKrMNcHw" target="_blank">Kramer et al. (2019)</a>] to diagnose radiative feedbacks associated with the MJO. As an important driver of tropical intraseasonal variability, The MJO can be viewed as a kind of convective aggregation which involves interactions between clouds, circulation, radiation and water vapor. This work quantifies individual feedbacks (temperature, water vapor, surface albedo and clouds) asscociated with the MJO. This figure below shows maps of the atmospheric radiative feedbacks during different phases of the MJO: (a) Planck, (b) lapse rate, (c) water vapor, (d) cloud (units: W m<sup>-2</sup>) and (e) precipitation anomalies (units: mm day<sup>-1</sup>)</p>
-
-          <img src="images/p_figure1_abcde.png" alt="" class="temp-fb-img">
-
-
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="research.html" class="btn btn-outline"
+            style="color: var(--color-brand); border-color: var(--color-brand);">Back to Research</a>
         </div>
 
       </div>
-
-
-
-
-    </section>
-
-
-
-    <div class="container">
-      <div class="related-publications">
-        <h2>Related Publications</h2>
-        <ul>
-            <li><a href="https://journals.ametsoc.org/view/journals/clim/aop/JCLI-D-20-0574.1/JCLI-D-20-0574.1.xml" target="_blank">Zhang, B., B. J. Soden, G. A. Vecchi, and W. Yang, 2021: The Role of Radiative Interactions in Tropical Cyclone Development under Realistic Boundary Conditions. J. Climate, 34, 2079–2091</a>
-            </li>
-            <li><a href="https://journals.ametsoc.org/view/journals/clim/36/16/JCLI-D-22-0449.1.xml" target="_blank">Hsieh, T., B. Zhang, W. Yang, G. A. Vecchi, M. Zhao, B. J. Soden, and C. Wang, 2023: The Influence of Large-Scale Radiation Anomalies on Tropical Cyclone Frequency. J. Climate, 36, 5431–5441, </a>
-
-            <li><a href="https://journals.ametsoc.org/view/journals/clim/36/4/JCLI-D-22-0199.1.xml" target="_blank">Zhang, B., B. J. Soden, and G. A. Vecchi, 2023: A Vertically Resolved Analysis of Radiative Feedbacks on Moist Static Energy Variance in Tropical Cyclones. J. Climate, 36, 1125–1141</a>
-            </li>
-
-        </ul>
-      </div>
-    </div>
-
+    </article>
   </main>
-  <script src="js/myScript.js"></script>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bosong Zhang. Last updated: 08/22/2025</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
+
 </html>

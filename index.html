@@ -1,92 +1,91 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bosong Zhang | Research & Academia</title>
+  <meta name="description"
+    content="Personal research website of Bosong Zhang, focusing on radiation-convection interactions and climate sensitivity.">
 
-  <title>Bosong Zhang</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <header>
-    <div class="header-title">
-      <a href="javascript:void(0);" class="header-icon" onclick="openHamburgerMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="22.667" viewBox="0 0 25 22.667"><defs><style>.a{fill:#fff;}</style></defs><path class="a" d="M3,28.667H28V24.889H3Zm0-9.444H28V15.444H3ZM3,6V9.778H28V6Z" transform="translate(-3 -6)"/></svg>
-      </a>
-      <h1>Bosong Zhang</h1>
-    </div>
 
-    <nav class="index-nav" id="top-nav">
-      <a href="#" class="nav-current">Home</a>
-      <a href="research.html">Research</a>
-      <!-- <a href="publications.html">Publications</a> -->
-      <a href="contact_me.html">Contact Me</a>
-      <a href="#" class="close-icon" onclick="openHamburgerMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31"><defs><style>.a{fill:#fff;}</style></defs><path class="a" d="M36,8.122,32.878,5,20.5,17.378,8.122,5,5,8.122,17.378,20.5,5,32.878,8.122,36,20.5,23.622,32.878,36,36,32.878,23.622,20.5Z" transform="translate(-5 -5)"/></svg>
-      </a>
-    </nav>
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <h1 class="site-title"><a href="index.html">Bosong Zhang</a></h1>
+
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="research.html">Research</a>
+        <!-- <a href="publications.html">Publications</a> -->
+        <a href="contact_me.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-
-
-    <div class="about">
-      <div class="wrapper">
-        <h2 class="dark"> </h2>
-
-        <p class="dark"> I am interested in radiation-convection interactions, radiative feedback and climate sensitivity.</p>
-
-        <p class="dark">  My publications can be found at <a href="https://scholar.google.com/citations?user=fe0ePl0AAAAJ&hl=en" target="_blank">Google Scholar</a>.</p>  
-        <!-- <p class="dark"></p> -->
-
-        <!-- <a class="primary-btn" href="documents/cv_bosong.zhang_2021_02.pdf" target="_blank">Download CV</a> -->
-      </div>
-    </div>
-
-<!--     <div class="experience">
-      <div class="expe-comp wrapper">
-        <h2 class="dark title">Experience</h2>
-        <div class="left">
-          <h3 class="dark">Work for Ph.D.</h3>
-          <p class="dark">Advisor: Brian J. Soden</p>
-          <p class="dark">University of Miami, Miami, FL</p>
-          <p class="dark">2018 – present</p>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Bosong Zhang</h1>
+        <p class="hero-subtitle">Exploring radiation-convection interactions, radiative feedback, and climate
+          sensitivity.</p>
+        <div class="hero-buttons">
+          <a href="research.html" class="btn btn-primary">View Research</a>
+          <a href="contact_me.html" class="btn btn-outline">Get in Touch</a>
         </div>
-        <ul class="right">
-          <li>I use observations and general circulation models to investigate the coupling between clouds, radiation, circulation and convection.</li>
-        </ul>
-
-        <div class="left">
-          <h3 class="dark">Work for M.S. </h3>
-          <p class="dark">Advisor: Chidong Zhang</p>
-          <p class="dark">University of Miami, Miami, FL</p>
-          <p class="dark">2016 – 2018</p>
-        </div>
-        <ul class="right">
-          <li>I worked on how the quasi-biennial oscillation (QBO) affects the Madden-Julian Oscillation (MJO).</li>
-        </ul>
-
       </div>
-    </div> -->
+    </section>
 
+    <!-- About Section -->
+    <section class="about">
+      <div class="container">
+        <div class="card">
+          <div class="card-content">
+            <h2>About Me</h2>
+            <p>I am a researcher dedicated to understanding the complexities of our climate system. My work primarily
+              focuses on using observations and general circulation models to investigate the coupling between clouds,
+              radiation, circulation, and convection.</p>
 
+            <p>Previously, I completed my Ph.D. at the University of Miami under the guidance of Brian J. Soden, where I
+              studied these interactions in depth. </p>
+
+            <p>You can find a complete list of my work on <a
+                href="https://scholar.google.com/citations?user=fe0ePl0AAAAJ&hl=en" target="_blank">Google Scholar</a>.
+            </p>
+
+            <!-- <div style="margin-top: 2rem;">
+              <a href="documents/cv_bosong.zhang_2021_02.pdf" class="btn btn-primary" target="_blank">Download CV</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
+  <!-- Footer -->
   <footer>
-    <div class="wrapper">
-      <!-- <h2 class="light center">Contact Me</h2>
-      <p class="light center">Email: bosongzhang@gmail.com</p>
-      <p class="light center">Address: 4600 Rickenbacker Causeway, Miami, FL, 33149 </p> -->
-      <h2 class="light center">Last Updated</h2>
-      <p class="light center">07/01/2024</p>
+    <div class="container">
+      <p>&copy; 2025 Bosong Zhang. Last updated: 08/22/2025</p>
     </div>
   </footer>
 
-  <script src="js/myScript.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

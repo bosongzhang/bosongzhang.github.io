@@ -1,102 +1,134 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Future Projections of Precipitation Change | Bosong Zhang</title>
 
-  <title>Research</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <header>
-    <div class="header-title">
-      <a href="javascript:void(0);" class="header-icon" onclick="openHamburgerMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="22.667" viewBox="0 0 25 22.667"><defs><style>.a{fill:#fff;}</style></defs><path class="a" d="M3,28.667H28V24.889H3Zm0-9.444H28V15.444H3ZM3,6V9.778H28V6Z" transform="translate(-3 -6)"/></svg>
-      </a>
-      <h1>Bosong Zhang</h1>
-    </div>
 
-    <nav class="index-nav" id="top-nav">
-      <a href="index.html">Home</a>
-      <a href="#" class="nav-current">Research</a>
-      <!-- <a href="publications.html">Publications</a> -->
-      <a href="contact_me.html">Contact Me</a>
-      <a href="#" class="close-icon" onclick="openHamburgerMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31"><defs><style>.a{fill:#fff;}</style></defs><path class="a" d="M36,8.122,32.878,5,20.5,17.378,8.122,5,5,8.122,17.378,20.5,5,32.878,8.122,36,20.5,23.622,32.878,36,36,32.878,23.622,20.5Z" transform="translate(-5 -5)"/></svg>
-      </a>
-    </nav>
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <h1 class="site-title"><a href="index.html">Bosong Zhang</a></h1>
+
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="contact_me.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-<main>
+  <main>
+    <article class="research-detail">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="research.html" class="breadcrumb-link">Back to Research</a>
+        </div>
+        <header class="article-header" style="margin-bottom: 2rem; text-align: center;">
+          <h1>Uncertainty in Model Projections of Precipitation Change</h1>
+        </header>
 
+        <section class="content-section">
+          <p><b>Overview</b>: There are large uncertainties in model simulations of the current climate and projections
+            of future climate. Bias correction methods are often used to reduce intermodel spread based on observations.
+            Regarding precipitation over land, we find that only model simulations of the current climate are improved
+            while uncertainties in future projections remain large even after bias correction.</p>
 
-    <section class="content">
+          <div class="figure-container">
+            <img src="images/p_figure2_scatter.png" alt="Scatter Plot" class="research-figure">
+            <p class="caption" style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--color-text-muted);">
+              Cross-model spatial correlation of climatology vs. precipitation change.</p>
+          </div>
+        </section>
 
-    <div class="wrapper">
-      <div class="recent-research-comp">
-        <h2 class="dark">Reduce the uncertainty in model projections of precipitation change</h2>
+        <!-- Slideshow -->
+        <section class="slideshow-container" style="margin: 1.5rem 0; position: relative;">
+          <div class="slides" style="position: relative; height: 400px; overflow: hidden;">
+            <div class="slide" style="display: none; text-align: center;">
+              <img src="images/fig5.png" alt="Slide 1" style="max-height: 400px; margin: 0 auto;">
+            </div>
+            <div class="slide" style="display: none; text-align: center;">
+              <img src="images/fig1.png" alt="Slide 2" style="max-height: 400px; margin: 0 auto;">
+            </div>
+            <div class="slide" style="display: none; text-align: center;">
+              <img src="images/fig1.png" alt="Slide 3" style="max-height: 400px; margin: 0 auto;">
+            </div>
+            <div class="slide" style="display: none; text-align: center;">
+              <img src="images/fig1.png" alt="Slide 4" style="max-height: 400px; margin: 0 auto;">
+            </div>
+            <div class="slide" style="display: none; text-align: center;">
+              <img src="images/fig1.png" alt="Slide 5" style="max-height: 400px; margin: 0 auto;">
+            </div>
+            <div class="slide" style="display: none; text-align: center;">
+              <img src="images/fig1.png" alt="Slide 6" style="max-height: 400px; margin: 0 auto;">
+            </div>
+          </div>
+          <div class="dots-container" style="text-align: center; margin-top: 1rem;">
+            <span class="dot"
+              style="height: 10px; width: 10px; background-color: #bbb; border-radius: 50%; display: inline-block; margin: 0 5px; cursor: pointer;"></span>
+            <span class="dot"
+              style="height: 10px; width: 10px; background-color: #bbb; border-radius: 50%; display: inline-block; margin: 0 5px; cursor: pointer;"></span>
+            <span class="dot"
+              style="height: 10px; width: 10px; background-color: #bbb; border-radius: 50%; display: inline-block; margin: 0 5px; cursor: pointer;"></span>
+            <span class="dot"
+              style="height: 10px; width: 10px; background-color: #bbb; border-radius: 50%; display: inline-block; margin: 0 5px; cursor: pointer;"></span>
+            <span class="dot"
+              style="height: 10px; width: 10px; background-color: #bbb; border-radius: 50%; display: inline-block; margin: 0 5px; cursor: pointer;"></span>
+            <span class="dot"
+              style="height: 10px; width: 10px; background-color: #bbb; border-radius: 50%; display: inline-block; margin: 0 5px; cursor: pointer;"></span>
+          </div>
+        </section>
 
-        <p align="justify">There are large uncertainties in model simulations of the current climate and projections of future climate. Bias correction methods are often used to reduce intermodel spread based on observations. Regarding precipitation over land, we find that only model simulations of the current climate is improved while uncertainties in future projections remain large even after bias correction. </p>
+        <div class="related-publications" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee;">
+          <h3>Related Publications</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li
+              style="margin-bottom: 1rem; padding: 1rem; background: #fff; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
+              <a href="https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2019GL083926" target="_blank">Zhang, B.,
+                & Soden, B. J. (2019). The sensitivity of precipitation projections to model bias. Geophysical Research
+                Letters.</a>
+            </li>
+          </ul>
+        </div>
 
-        <img src="images/p_figure2_scatter.png" alt="" class="temp-fb-img">
-<!--         <p>Hovm&ouml;ller diagram of the temperature feedback (ATM) during 8 phases of the MJO (unit: W m<sup>-2</sup>)</p> -->
-
-       <ul class="right">
-          <li>This figure shows the cross‐model spatial correlation of the climatology (x axis) versus the cross‐model spatial correlation of the precipitation change (y axis). More details can be found in <a href="https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2019GL083926" target="_blank">Zhang and Soden (2019)</a></li>
-        </ul>
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="research.html" class="btn btn-outline"
+            style="color: var(--color-brand); border-color: var(--color-brand);">Back to Research</a>
+        </div>
 
       </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bosong Zhang. Last updated: 08/22/2025</p>
     </div>
+  </footer>
 
-    </section>
-
-    <section class="slideshow-container">
-        <div class="slides">
-            <div class="slide">
-                <img src="images/fig5.png" alt="Slide 1">
-            </div>
-            <div class="slide">
-                <img src="images/fig1.png" alt="Slide 2">
-                <!-- <div class="caption">Caption for Slide 1</div> -->
-            </div>
-            <div class="slide">
-                <img src="images/fig1.png" alt="Slide 3">
-                <!-- <div class="caption">Caption for Slide 1</div> -->
-            </div>
-            <div class="slide">
-                <img src="images/fig1.png" alt="Slide 4">
-                <!-- <div class="caption">Caption for Slide 1</div> -->
-            </div>
-            <div class="slide">
-                <img src="images/fig1.png" alt="Slide 5">
-                <!-- <div class="caption">Caption for Slide 1</div> -->
-            </div>
-            <div class="slide">
-                <img src="images/fig1.png" alt="Slide 6">
-                <!-- <div class="caption">Caption for Slide 1</div> -->
-            </div>
-        
-
-        </div>
-            <div class="dots-container">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-    </section>
-
-    <button onclick="window.location.href='research.html'">Go Back</button>
-
-</main>
-
-  <script src="js/myScript.js"></script>
-
+  <script src="js/main.js"></script>
+  <style>
+    .active {
+      background-color: var(--color-brand) !important;
+    }
+  </style>
 </body>
 
 </html>

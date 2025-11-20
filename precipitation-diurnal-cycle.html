@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Precipitation Diurnal Cycle | Bosong Zhang</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- MathJax -->
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <h1 class="site-title"><a href="index.html">Bosong Zhang</a></h1>
+
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="contact_me.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="research-detail">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="research.html" class="breadcrumb-link">Back to Research</a>
+        </div>
+        <header class="article-header text-center mb-4">
+          <h1>Precipitation Diurnal Cycle in Climate Models</h1>
+        </header>
+
+        <section class="content-section">
+          <p><b>Overview</b>: Global climate models often struggle with accurately simulating daily convection cycles,
+            particularly over land, where precipitation peaks are frequently predicted too early. A new convective
+            closure approach has been developed to address this issue by incorporating the role of shallow convection in
+            balancing boundary layer changes throughout the day. This advancement has led to a marked improvement in the
+            representation of diurnal patterns in both atmosphere-only and coupled ocean-atmosphere models.</p>
+
+          <p>The animation below shows CAPE tendency due to shallow convection (left) and CAPE tendency due to
+            non-convective PBL processes (right). They tend to cancel each other out.</p>
+
+          <div class="figure-container">
+            <img src="images/animation1.gif" alt="CAPE tendency animation" class="research-figure">
+          </div>
+
+          <p>In climate models, quasi-equilibrium assumes that CAPE changes induced by non-convective processes (e.g.,
+            large-scale advection, surface fluxes, radiative cooling, and eddy diffusion) are approximately balanced by
+            CAPE changes due to convective processes.</p>
+
+          <div class="equation-container">
+            <p>
+              \[
+              \left( \frac{\partial \text{CAPE}}{\partial t} \right) = \left( \frac{\partial \text{CAPE}}{\partial t}
+              \right)_{\text{nc,BL}} + \left( \frac{\partial \text{CAPE}}{\partial t} \right)_{\text{nc,FT}} + \left(
+              \frac{\partial \text{CAPE}}{\partial t} \right)_{\text{deep}} + \left( \frac{\partial
+              \text{CAPE}}{\partial t} \right)_{\text{shal}}
+              \]
+            </p>
+          </div>
+
+          <p>Previously, only deep convection was considered, which means:</p>
+          <p>
+            \[
+            \left(\frac{\partial \text{CAPE}}{\partial t}\right)_{\text{deep}} = -\frac{\text{CAPE} -
+            \text{CAPE}_0}{\tau}
+            \]
+          </p>
+
+          <p>Here, we need to consider the contribution from shallow convection, which leads to:</p>
+          <p>
+            \[
+            \left(\frac{\partial \text{CAPE}}{\partial t}\right)_{\text{deep}} = -\frac{\text{CAPE} -
+            \text{CAPE}_0}{\tau} {\color{red}- \left(\frac{\partial \text{CAPE}}{\partial t}\right)_{\text{shal}}}
+            \]
+          </p>
+
+          <p>Where \[ \text{CAPE}_0\] is a reference value toward which CAPE, having evolved by non-convective processes
+            since its last adjustment due to convection, relaxes over an extended time τ.</p>
+
+          <p><b>Results</b>: This adjustment delays peak land precipitation by approximately three hours and reduces
+            diurnal phase biases by 50% compared to satellite observations. The figure below compares the original
+            method (standard AM4), the new closure approach (relax QE D+S), and satellite observations (IMERG) for total
+            precipitation, as well as a decomposition of convective and large-scale precipitation.</p>
+        </section>
+
+        <!-- Slideshow -->
+        <section class="slideshow-container mt-3 mb-3" style="position: relative;">
+          <div class="slides" style="position: relative; height: 400px; overflow: hidden;">
+            <div class="slide" style="display: none; text-align: center;">
+              <img src="images/fig5.png" alt="Slide 1" style="max-height: 400px; margin: 0 auto;">
+            </div>
+            <div class="slide" style="display: none; text-align: center;">
+              <img src="images/fig6.png" alt="Slide 2" style="max-height: 400px; margin: 0 auto;">
+            </div>
+          </div>
+          <div class="dots-container" style="text-align: center; margin-top: 1rem;">
+            <span class="dot"
+              style="height: 10px; width: 10px; background-color: #bbb; border-radius: 50%; display: inline-block; margin: 0 5px; cursor: pointer;"></span>
+            <span class="dot"
+              style="height: 10px; width: 10px; background-color: #bbb; border-radius: 50%; display: inline-block; margin: 0 5px; cursor: pointer;"></span>
+          </div>
+        </section>
+
+        <div class="related-publications mt-5 border-top">
+          <h3>Related Publications</h3>
+          <ul class="related-pubs-list">
+            <li class="related-pub-item">
+              <a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024MS004315" target="_blank">Zhang, B.,
+                Donner, L. J., Zhao, M., & Tan, Z. (2024). Improved precipitation diurnal cycle in GFDL climate models
+                with non-equilibrium convection. Journal of Advances in Modeling Earth Systems, 16, e2024MS004315.
+                https://doi.org/10.1029/2024MS004315</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="research.html" class="btn btn-outline"
+            style="color: var(--color-brand); border-color: var(--color-brand);">Back to Research</a>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bosong Zhang. Last updated: 08/22/2025</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

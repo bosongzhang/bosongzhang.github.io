@@ -18,9 +18,9 @@
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-lg: 4rem;
-  --spacing-xl: 8rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 5rem;
 
   /* Typography */
   --font-heading: 'Playfair Display', serif;
@@ -103,7 +103,7 @@ p {
 /* Layout */
 .container {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 var(--spacing-sm);
 }
@@ -206,6 +206,13 @@ body>header {
   margin: 0 auto var(--spacing-md);
 }
 
+.page-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
 .btn {
   display: inline-block;
   padding: 0.8rem 1.6rem;
@@ -299,7 +306,7 @@ body>header {
 .card-text {
   color: var(--color-text-muted);
   font-size: 0.95rem;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: 1rem;
   flex-grow: 1;
 }
 
@@ -366,7 +373,7 @@ footer p {
 /* Breadcrumb */
 .breadcrumb-nav {
   margin-bottom: var(--spacing-md);
-  margin-top: var(--spacing-lg);
+  margin-top: var(--spacing-md);
 }
 
 .breadcrumb-link {
@@ -402,8 +409,8 @@ footer p {
 /* Research Figures */
 .research-figure {
   display: block;
-  max-width: 85%;
-  max-height: 500px;
+  max-width: 80%;
+  max-height: 450px;
   width: auto;
   height: auto;
   margin: 0 auto;
@@ -422,5 +429,63 @@ footer p {
 
 .figure-container {
   text-align: center;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
+}
+
+/* Utility Classes for Common Inline Styles */
+.text-center {
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
+.mb-3 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.mt-3 {
+  margin-top: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 2rem;
+}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+.border-top {
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+}
+
+.related-pubs-list {
+  list-style: none;
+  padding: 0;
+}
+
+.related-pub-item {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.equation-container {
+  overflow-x: auto;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  text-align: center;
 }

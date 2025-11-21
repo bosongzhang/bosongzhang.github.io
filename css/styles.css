@@ -213,6 +213,118 @@ body>header {
   margin: 0 auto 2rem;
 }
 
+.theme-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  border-bottom: 2px solid var(--color-accent);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* Theme Variations */
+.theme-radiation {
+  background-color: var(--color-bg-body);
+}
+
+.theme-radiation .theme-title {
+  border-bottom-color: var(--color-brand);
+  color: var(--color-brand);
+}
+
+.theme-sst {
+  background-color: #ffffff;
+}
+
+.theme-sst .theme-title {
+  border-bottom-color: var(--color-accent);
+  color: var(--color-brand);
+}
+
+.theme-model {
+  background-color: rgba(10, 35, 66, 0.03);
+  /* Very light brand tint */
+}
+
+.theme-model .theme-title {
+  border-bottom-color: var(--color-brand-light);
+  color: var(--color-brand-light);
+}
+
+/* Research Page Layout (Sidebar + Content) */
+.research-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: var(--spacing-lg);
+  align-items: start;
+  margin-top: var(--spacing-lg);
+}
+
+.research-sidebar {
+  position: sticky;
+  top: 100px;
+  /* Adjust based on header height */
+  padding-right: var(--spacing-md);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.toc-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--color-brand);
+}
+
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-list li {
+  margin-bottom: 0.75rem;
+}
+
+.toc-link {
+  color: var(--color-brand);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+  padding: 0.4rem 0;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.toc-link:hover {
+  color: var(--color-brand);
+  transform: translateX(3px);
+}
+
+/* Adjust theme sections for sidebar layout */
+.research-content .research-theme {
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  scroll-margin-top: 120px;
+  /* Fix for sticky header covering titles */
+}
+
+/* Responsive Sidebar */
+@media (max-width: 900px) {
+  .research-layout {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .research-sidebar {
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
 .btn {
   display: inline-block;
   padding: 0.8rem 1.6rem;
@@ -463,6 +575,10 @@ footer p {
 
 .mt-5 {
   margin-top: 3rem;
+}
+
+.pt-0 {
+  padding-top: 0;
 }
 
 .border-top {

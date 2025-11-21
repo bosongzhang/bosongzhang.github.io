@@ -45,22 +45,47 @@
                 </header>
 
                 <section class="content-section">
-                    <p><b>Overview</b>we examine climate emulators and out-of-sample predictions.</p>
+                    <p><b>Overview</b>: We examine climate emulators and out-of-sample predictions.</p>
+
+                    <h3 class="mt-4">Models Used</h3>
+                    <ul class="model-list" style="list-style: none; padding-left: 0;">
+                        <li class="mb-4">
+                            <h4 style="color: var(--color-brand); margin-bottom: 0.5rem;">1. Climate in a Bottle
+                                (cBottle)</h4>
+                            <p>A generative diffusion model developed by NVIDIA. It uses a coarse-generation model (~100
+                                km resolution) trained on ERA5 (1980-2017). Uniquely, it is
+                                <strong>non-autoregressive</strong>, generating hourly outputs directly from SST inputs.
+                                We evaluate 10-year control and +2K simulations.
+                            </p>
+                        </li>
+                        <li class="mb-4">
+                            <h4 style="color: var(--color-brand); margin-bottom: 0.5rem;">2. ACE2-ERA5</h4>
+                            <p>An <strong>autoregressive</strong> ML model using Spherical Fourier Neural Operators.
+                                Trained on ERA5, it operates at 1&deg; spatial and 6-hourly temporal resolution. It
+                                combines a convolutional encoder with a Transformer-based predictor. We perform 10-year
+                                simulations initialized from 2001 conditions.</p>
+                        </li>
+                        <li class="mb-4">
+                            <h4 style="color: var(--color-brand); margin-bottom: 0.5rem;">3. NeuralGCM</h4>
+                            <p>A <strong>hybrid model</strong> combining a differentiable dynamical core with neural
+                                network parameterizations. Unlike pure ML emulators, it integrates physical dynamics
+                                with learned physics. It produces stable decadal simulations (140–280 km resolution) and
+                                includes precipitation outputs.</p>
+                        </li>
+                    </ul>
                 </section>
 
-                <!-- Slideshow -->
-                <section class="slideshow-container mt-3 mb-3" style="position: relative;">
-                    <div class="slides" style="position: relative; height: 400px; overflow: hidden;">
-                        <div class="slide" style="display: none; text-align: center;">
-                            <img src="images/mean_t_ref_comparison_individual_cbars.png" alt="Slide 1"
-                                style="max-height: 400px; margin: 0 auto;">
-                        </div>
+
+
+                <!-- Figure -->
+                <div class="figure-container mt-4 mb-4"
+                    style="display: grid; grid-template-columns: 1fr; gap: 2rem; justify-items: center;">
+                    <div class="figure-item" style="text-align: center;">
+                        <img src="images/mean_t_ref_comparison_individual_cbars.png" alt="Emulators Comparison"
+                            class="research-figure" style="max-width: 100%; max-height: none; width: 100%;">
+                        <p class="figure-caption">Comparison of mean reference temperature.</p>
                     </div>
-                    <div class="dots-container" style="text-align: center; margin-top: 1rem;">
-                        <span class="dot"
-                            style="height: 10px; width: 10px; background-color: #bbb; border-radius: 50%; display: inline-block; margin: 0 5px; cursor: pointer;"></span>
-                    </div>
-                </section>
+                </div>
 
                 <div class="related-publications mt-5 border-top">
                     <h3>Related Publications</h3>

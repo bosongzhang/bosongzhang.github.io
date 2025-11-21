@@ -300,6 +300,27 @@ body>header {
   transform: translateX(3px);
 }
 
+.toc-sublist {
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.toc-sublink {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: block;
+  padding: 0.2rem 0;
+  transition: all 0.2s ease;
+}
+
+.toc-sublink:hover {
+  color: var(--color-brand);
+  transform: translateX(3px);
+}
+
 /* Adjust theme sections for sidebar layout */
 .research-content .research-theme {
   padding: var(--spacing-md);

@@ -626,3 +626,122 @@ footer p {
   margin-bottom: 1rem;
   text-align: center;
 }
+
+/* Article Typography */
+.article-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text-main);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Figure Grid Layout */
+.figure-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+@media (min-width: 900px) {
+  .figure-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .span-full {
+    grid-column: 1 / -1;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+.figure-item {
+  text-align: center;
+}
+
+.figure-item img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 1rem;
+}
+
+.figure-caption {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  text-align: left;
+  line-height: 1.5;
+}
+
+/* Lightbox */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-image {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.lightbox-overlay.active .lightbox-image {
+  transform: scale(1);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.lightbox-close:hover {
+  color: var(--color-accent);
+}
+
+.figure-item img,
+.research-figure {
+  cursor: zoom-in;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.figure-item img:hover,
+.research-figure:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+}

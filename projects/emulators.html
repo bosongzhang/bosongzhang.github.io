@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Climate Emulators | Bosong Zhang</title>
+  <meta name="description"
+    content="Overview of climate emulator experiments and out-of-sample warming-response diagnostics.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="paper-page tc-overhaul-page gf-pattern-page tesla-inspired">
+
+  <header>
+    <div class="container header-inner">
+      <h1 class="site-title"><a href="../index.html">Bosong Zhang</a></h1>
+
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+      <nav class="main-nav">
+        <a href="../index.html">Home</a>
+        <a href="../research.html" class="active">Research</a>
+        <a href="../contact-me.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="paper-hero">
+      <div class="container paper-hero-grid">
+        <div class="paper-hero-copy">
+          <p class="paper-hero-kicker">Model Development and Evaluation</p>
+          <h1>Climate Emulators</h1>
+          <p class="paper-hero-subtitle">Cross-architecture emulator evaluation shows that mean-state agreement alone is insufficient; process-level and distributional fidelity control predictive reliability under warming.</p>
+          <div class="paper-hero-metrics">
+            <span class="paper-hero-chip">Generative + Autoregressive + Hybrid</span>
+            <span class="paper-hero-chip">Uniform SST Warming</span>
+            <span class="paper-hero-chip">Out-of-Sample Diagnostics</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="paper-stat-strip">
+      <div class="container">
+        <div class="paper-stat-grid">
+          <article class="paper-stat-card">
+            <p class="paper-stat-value">3 Model Families</p>
+            <p class="paper-stat-label">cBottle, ACE2-ERA5, and NeuralGCM</p>
+          </article>
+          <article class="paper-stat-card">
+            <p class="paper-stat-value">10-Year Runs</p>
+            <p class="paper-stat-label">Control and warming trajectories for emulator stress tests</p>
+          </article>
+          <article class="paper-stat-card">
+            <p class="paper-stat-value">ArXiv (2025)</p>
+            <p class="paper-stat-label">Equilibrium response to uniform sea-surface-temperature warming</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <article class="research-detail">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="../research.html" class="breadcrumb-link">Back to Research</a>
+        </div>
+
+        <section class="content-section paper-summary-card">
+          <p class="paper-label">Related Publication</p>
+          <p class="paper-citation">Zhang, B., and T. M. Merlis, 2025: The Equilibrium Response of Atmospheric
+            Machine-Learning Models to Uniform Sea Surface Temperature Warming. <i>arXiv</i>, 2510.02415.</p>
+          <div class="paper-actions">
+            <a href="https://arxiv.org/abs/2510.02415" target="_blank" rel="noopener" class="btn btn-primary">View Preprint</a>
+          </div>
+        </section>
+
+        <section class="paper-grid">
+        <article class="paper-panel span-full scientific-logic-block">
+          <h2>Scientific Logic</h2>
+          <ul class="paper-list">
+            <li><strong>Question:</strong> How reliably do climate emulators reproduce baseline climate structure and warming responses relevant to impacts?</li>
+            <li><strong>Method:</strong> Cross-model evaluation of generative, autoregressive, and hybrid emulator configurations against reference model fields in control and warming-like states.</li>
+            <li><strong>Mechanism:</strong> Architecture-dependent skill in preserving spatial covariance, variability, and extremes determines whether mean-state agreement translates to trustworthy anomaly responses.</li>
+            <li><strong>Main Findings:</strong> Some emulator families match global means but diverge regionally and in distribution tails, motivating process-aware constraints before impact attribution.</li>
+          </ul>
+        </article>
+
+          <article class="paper-panel">
+            <h2>Scientific Focus</h2>
+            <p>How reliably do next-generation climate emulators reproduce mean-state and warming-response behavior,
+              particularly when evaluated outside their training distribution?</p>
+          </article>
+
+          <article class="paper-panel">
+            <h2>Model Set</h2>
+            <ul class="paper-list">
+              <li><b>cBottle:</b> non-autoregressive diffusion framework generating hourly fields from SST forcing.</li>
+              <li><b>ACE2-ERA5:</b> autoregressive SFNO architecture at 1 degree / 6-hour resolution.</li>
+              <li><b>NeuralGCM:</b> hybrid dynamical-core plus neural-physics model enabling stable decadal runs.</li>
+            </ul>
+          </article>
+
+          <article class="paper-panel span-full">
+            <h2>Key Findings</h2>
+            <ul class="paper-list">
+              <li>Different emulator families show distinct strengths in spatial pattern, variability, and tail-behavior reproduction.</li>
+              <li>Skill in control climate does not guarantee robust response under warming perturbations.</li>
+              <li>Process-aware diagnostics are required before using emulators for attribution-sensitive applications.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="content-section">
+          <h2>Figure</h2>
+          <div class="paper-figure-gallery">
+            <figure class="paper-figure-card span-full">
+              <p class="paper-figure-label">Comparison (Extracted)</p>
+              <img src="../images/projects/emulators/emulator-mean-temperature-comparison.png" alt="Mean reference temperature comparison across emulator models"
+                class="research-figure figure-wide">
+              <figcaption class="figure-caption">Comparison of mean reference-temperature structure across emulator
+                frameworks in control and warming conditions.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <div class="text-center mt-4">
+          <a href="../research.html" class="btn btn-outline">Back to Research</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Bosong Zhang. Last updated: 03/04/2026</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

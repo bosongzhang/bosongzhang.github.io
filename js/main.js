@@ -123,4 +123,106 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Research sidebar theme accordion + active state
+    const themeMenuGroups = document.querySelectorAll('.research-page .theme-menu-group[data-theme-group]');
+    if (themeMenuGroups.length > 0) {
+        const setGroupOpen = (group, open) => {
+            const button = group.querySelector('.theme-menu-button[data-theme-target]');
+            const panel = group.querySelector('.theme-menu-panel');
+            group.classList.toggle('is-open', open);
+            if (button) {
+                button.setAttribute('aria-expanded', String(open));
+            }
+            if (panel) {
+                panel.hidden = !open;
+            }
+        };
+
+        const openGroupById = (id) => {
+            themeMenuGroups.forEach((group) => {
+                setGroupOpen(group, group.getAttribute('data-theme-group') === id);
+            });
+        };
+
+        const activateThemeLink = (id) => {
+            themeMenuGroups.forEach((group) => {
+                const button = group.querySelector('.theme-menu-button[data-theme-target]');
+                const isMatch = group.getAttribute('data-theme-group') === id;
+                if (button) {
+                    button.classList.toggle('is-active', isMatch);
+                }
+            });
+        };
+
+        themeMenuGroups.forEach((group) => {
+            const button = group.querySelector('.theme-menu-button[data-theme-target]');
+            if (!button) return;
+
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-theme-target');
+                const isOpen = group.classList.contains('is-open');
+                if (isOpen) {
+                    setGroupOpen(group, false);
+                    button.classList.remove('is-active');
+                } else {
+                    openGroupById(targetId);
+                    activateThemeLink(targetId);
+                }
+            });
+        });
+
+        const sections = Array.from(themeMenuGroups)
+            .map((group) => {
+                const button = group.querySelector('.theme-menu-button[data-theme-target]');
+                if (!button) return null;
+                return document.getElementById(button.getAttribute('data-theme-target'));
+            })
+            .filter(Boolean);
+
+        if (sections.length > 0) {
+            const observer = new IntersectionObserver((entries) => {
+                const visible = entries
+                    .filter((entry) => entry.isIntersecting)
+                    .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+                if (visible.length > 0) {
+                    const activeId = visible[0].target.id;
+                    activateThemeLink(activeId);
+                    openGroupById(activeId);
+                }
+            }, {
+                root: null,
+                rootMargin: '-20% 0px -60% 0px',
+                threshold: [0.2, 0.4, 0.6]
+            });
+
+            sections.forEach((section) => observer.observe(section));
+        }
+
+        const initialHash = window.location.hash.replace('#', '');
+        if (initialHash) {
+            activateThemeLink(initialHash);
+            openGroupById(initialHash);
+        }
+
+        window.addEventListener('hashchange', () => {
+            const hashId = window.location.hash.replace('#', '');
+            if (hashId) {
+                activateThemeLink(hashId);
+                openGroupById(hashId);
+            }
+        });
+    }
+
+    // Mark current page in project-level TOC links
+    const tocProjectLinks = document.querySelectorAll('.research-page .toc-sublink');
+    if (tocProjectLinks.length > 0) {
+        const currentPath = window.location.pathname.split('/').pop() || 'research.html';
+        tocProjectLinks.forEach((link) => {
+            const href = link.getAttribute('href') || '';
+            if (href === currentPath || href.endsWith(`/${currentPath}`)) {
+                link.classList.add('is-active');
+            }
+        });
+    }
 });

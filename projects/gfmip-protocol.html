@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Green's Function Model Intercomparison Project (GFMIP) Protocol | Bosong Zhang</title>
+  <meta name="description"
+    content="Summary of Bloch-Johnson et al. (2024, JAMES) describing the Green's Function Model Intercomparison Project (GFMIP) protocol.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="paper-page tc-overhaul-page gf-pattern-page tesla-inspired">
+
+  <header>
+    <div class="container header-inner">
+      <h1 class="site-title"><a href="../index.html">Bosong Zhang</a></h1>
+
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+      <nav class="main-nav">
+        <a href="../index.html">Home</a>
+        <a href="../research.html" class="active">Research</a>
+        <a href="../contact-me.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="paper-hero">
+      <div class="container paper-hero-grid">
+        <div class="paper-hero-copy">
+          <p class="paper-hero-kicker">Forcing and Feedback • Radiative Feedbacks</p>
+          <p class="paper-hero-kicker">Journal of Advances in Modeling Earth Systems (2024)</p>
+          <h1>The Green's Function Model Intercomparison Project (GFMIP) Protocol</h1>
+          <p class="paper-hero-subtitle">The GFMIP protocol standardizes regional SST-perturbation experiments to build comparable Green’s functions and quantify pattern-effect feedback contributions across models.</p>
+          <div class="paper-hero-metrics">
+            <span class="paper-hero-chip">DOI: 10.1029/2023MS003700</span>
+            <span class="paper-hero-chip">GFMIP Protocol</span>
+            <span class="paper-hero-chip">SST Patch Experiments</span>
+            <span class="paper-hero-chip">Pattern Effect Diagnostics</span>
+          </div>
+        </div>
+
+        <figure class="paper-hero-figure">
+          <img src="../images/projects/gfmip-protocol/gfmip-protocol-figure-1.jpg"
+            alt="Figure 1 from Bloch-Johnson et al. 2024 showing Green's function model intercomparison workflow">
+          <figcaption>Figure 1: GFMIP framework and reconstruction pathway used to estimate responses to arbitrary SST
+            patterns from patch perturbation experiments.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="paper-stat-strip">
+      <div class="container">
+        <div class="paper-stat-grid">
+          <article class="paper-stat-card">
+            <p class="paper-stat-value">Protocol Standardization</p>
+            <p class="paper-stat-label">Defines shared experiment setup for cross-model Green's function diagnostics.
+            </p>
+          </article>
+          <article class="paper-stat-card">
+            <p class="paper-stat-value">Nonlinearity Identified</p>
+            <p class="paper-stat-label">Warming-cooling asymmetry and patch-size dependence are first-order design
+              considerations.</p>
+          </article>
+          <article class="paper-stat-card">
+            <p class="paper-stat-value">Practical Guidance</p>
+            <p class="paper-stat-label">HadAM3 tests support a tractable compromise around perturbation amplitude and
+              run duration.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <article class="research-detail">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="../research.html" class="breadcrumb-link">Back to Research</a>
+        </div>
+
+        <section class="content-section paper-summary-card">
+          <p class="paper-label">Paper Citation</p>
+          <p class="paper-citation">Bloch-Johnson, J., M. A. A. Rugenstein, M. J. Alessi, C. Proistosescu,
+            M. Zhao, B. Zhang, et al., 2024: The Green's Function Model Intercomparison Project (GFMIP) Protocol.
+            <i>Journal of Advances in Modeling Earth Systems</i>, 16, e2023MS003700.
+            https://doi.org/10.1029/2023MS003700</p>
+          <div class="paper-actions">
+            <a href="https://doi.org/10.1029/2023MS003700" target="_blank" rel="noopener" class="btn btn-primary">View
+              Journal Article</a>
+            <a href="../documents/projects/gfmip-protocol/the-greens-function-model-intercomparison-project-gfmip-protocol.pdf" target="_blank"
+              rel="noopener" class="btn btn-outline">Open PDF</a>
+            <a href="https://doi.org/10.5281/zenodo.10414728" target="_blank" rel="noopener" class="btn btn-outline">Data
+              (Zenodo)</a>
+            <a href="https://doi.org/10.5281/zenodo.10414658" target="_blank" rel="noopener" class="btn btn-outline">Code
+              (Zenodo)</a>
+          </div>
+        </section>
+
+        <section class="paper-grid">
+        <article class="paper-panel span-full scientific-logic-block">
+          <h2>Scientific Logic</h2>
+          <ul class="paper-list">
+            <li><strong>Question:</strong> How can atmospheric Green’s-function (GF) experiments be standardized for robust intercomparison of pattern-effect diagnostics?</li>
+            <li><strong>Method:</strong> A protocol based on localized SST perturbation experiments and shared diagnostics to construct comparable GF operators across models.</li>
+            <li><strong>Mechanism:</strong> Linear superposition of regional SST responses decomposes global radiative-feedback changes into physically interpretable regional contributions.</li>
+            <li><strong>Main Findings:</strong> The protocol establishes reproducible GF construction and benchmarking, while clarifying where nonlinear behavior limits linear reconstruction skill.</li>
+          </ul>
+        </article>
+          <article class="paper-panel">
+            <h2>Scientific Goal</h2>
+            <p>Establish a consistent model intercomparison protocol for atmospheric Green's functions to diagnose the
+              climate response to observed and idealized SST patterns.</p>
+          </article>
+
+          <article class="paper-panel">
+            <h2>Protocol Design</h2>
+            <ul class="paper-list">
+              <li>Apply localized SST patch perturbations over climatological AMIP boundary conditions.</li>
+              <li>Construct response kernels and reconstruct arbitrary SST-pattern responses by superposition.</li>
+              <li>Quantify sensitivity to perturbation sign, perturbation magnitude, patch scale, and run duration.</li>
+            </ul>
+          </article>
+
+          <article class="paper-panel span-full">
+            <h2>Key Findings</h2>
+            <ul class="paper-list">
+              <li>A unified experiment design enables reproducible GF construction and direct intermodel comparison.</li>
+              <li>GF decomposition attributes global feedback changes to regional SST anomalies with transparent physical interpretation.</li>
+              <li>Linear reconstruction skill is high at broad scales but exposes important nonlinear limits in key tropical regimes.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="content-section">
+          <h2>Figures from the Study</h2>
+          <p class="paper-figure-note">Extracted directly from Bloch-Johnson et al. (2024), JAMES,
+            https://doi.org/10.1029/2023MS003700.</p>
+          <div class="paper-figure-gallery">
+            <figure class="paper-figure-card span-full">
+              <p class="paper-figure-label">Figure 1</p>
+              <img src="../images/projects/gfmip-protocol/gfmip-protocol-figure-1.jpg"
+                alt="Figure 1 from Bloch-Johnson et al. 2024 showing GFMIP framework and workflow"
+                class="research-figure figure-wide">
+              <figcaption class="figure-caption">Protocol framework for building Green's functions and reconstructing
+                temperature-pattern responses.</figcaption>
+            </figure>
+
+            <figure class="paper-figure-card">
+              <p class="paper-figure-label">Figure 2</p>
+              <img src="../images/projects/gfmip-protocol/gfmip-protocol-figure-2.jpg"
+                alt="Figure 2 from Bloch-Johnson et al. 2024 showing protocol setup and sensitivity tests"
+                class="research-figure figure-wide">
+              <figcaption class="figure-caption">Protocol setup and sensitivity diagnostics related to perturbation
+                design choices.</figcaption>
+            </figure>
+
+            <figure class="paper-figure-card">
+              <p class="paper-figure-label">Figure 3</p>
+              <img src="../images/projects/gfmip-protocol/gfmip-protocol-figure-3.jpg"
+                alt="Figure 3 from Bloch-Johnson et al. 2024 illustrating reconstructed response behavior"
+                class="research-figure figure-wide">
+              <figcaption class="figure-caption">Reconstructed-response diagnostics illustrating method performance
+                across representative SST patterns.</figcaption>
+            </figure>
+
+            <figure class="paper-figure-card">
+              <p class="paper-figure-label">Figure 4</p>
+              <img src="../images/projects/gfmip-protocol/gfmip-protocol-figure-4.jpg"
+                alt="Figure 4 from Bloch-Johnson et al. 2024 showing uncertainty and nonlinearity behavior"
+                class="research-figure figure-wide">
+              <figcaption class="figure-caption">Uncertainty structure and nonlinearity signatures across protocol
+                parameter selections.</figcaption>
+            </figure>
+
+            <figure class="paper-figure-card">
+              <p class="paper-figure-label">Figure 5a</p>
+              <img src="../images/projects/gfmip-protocol/gfmip-protocol-figure-5-a.jpg"
+                alt="Figure 5a from Bloch-Johnson et al. 2024 showing protocol summary diagnostics"
+                class="research-figure figure-wide">
+              <figcaption class="figure-caption">Summary comparison of experiment configurations and reconstruction
+                diagnostics.</figcaption>
+            </figure>
+
+            <figure class="paper-figure-card">
+              <p class="paper-figure-label">Figure 5b</p>
+              <img src="../images/projects/gfmip-protocol/gfmip-protocol-figure-5-b.jpg"
+                alt="Figure 5b from Bloch-Johnson et al. 2024 showing protocol summary diagnostics"
+                class="research-figure figure-wide">
+              <figcaption class="figure-caption">Complementary protocol summary panel highlighting recommended setup
+                tradeoffs.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <div class="text-center mt-4">
+          <a href="../research.html" class="btn btn-outline">Back to Research</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Bosong Zhang. Last updated: 03/03/2026</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

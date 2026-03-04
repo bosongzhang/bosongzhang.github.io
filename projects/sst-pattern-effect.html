@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Using a Green’s Function Approach to Diagnose the Pattern Effect in GFDL AM4 and CM4 | Bosong Zhang</title>
+  <meta name="description"
+    content="Summary of Zhang et al. (2023, Journal of Climate) using a Green's function framework to diagnose SST-pattern effects on radiative feedbacks in GFDL AM4 and CM4.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="paper-page tc-overhaul-page gf-pattern-page tesla-inspired">
+
+  <header>
+    <div class="container header-inner">
+      <h1 class="site-title"><a href="../index.html">Bosong Zhang</a></h1>
+
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+      <nav class="main-nav">
+        <a href="../index.html">Home</a>
+        <a href="../research.html" class="active">Research</a>
+        <a href="../contact-me.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="paper-hero">
+      <div class="container paper-hero-grid">
+        <div class="paper-hero-copy">
+          <p class="paper-hero-kicker">Forcing and Feedback • Radiative Feedbacks</p>
+          <p class="paper-hero-kicker">Journal of Climate (2023)</p>
+          <h1>Using a Green’s Function Approach to Diagnose the Pattern Effect in GFDL AM4 and CM4</h1>
+          <p class="paper-hero-subtitle">Green’s-function reconstruction in AM4/CM4 captures major large-scale pattern-effect feedback signatures while exposing tropical regions where linearity breaks down.</p>
+          <div class="paper-hero-metrics">
+            <span class="paper-hero-chip">AM4 + CM4</span>
+            <span class="paper-hero-chip">SST Pattern Effect</span>
+            <span class="paper-hero-chip">Green's Function</span>
+            <span class="paper-hero-chip">DOI: 10.1175/JCLI-D-22-0024.1</span>
+          </div>
+        </div>
+
+        <figure class="paper-hero-figure">
+          <img src="../images/projects/sst-pattern-effect/green-function-2023-figure-1.jpg"
+            alt="Figure 1 from Zhang et al. 2023 showing Green's function spatial response patterns">
+          <figcaption>Figure 1: spatial Green's function sensitivity patterns for net radiation, temperature,
+            feedback, and cloud-related diagnostics.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="paper-stat-strip">
+      <div class="container">
+        <div class="paper-stat-grid">
+          <article class="paper-stat-card">
+            <p class="paper-stat-value">Pattern Effect Quantified</p>
+            <p class="paper-stat-label">Regional SST anomalies can be linearly mapped to global-mean feedback
+              variability with substantial skill in AM4.</p>
+          </article>
+          <article class="paper-stat-card">
+            <p class="paper-stat-value">Global vs Regional Skill</p>
+            <p class="paper-stat-label">Interannual variability is captured better than absolute magnitude,
+              especially for cloud-radiative components.</p>
+          </article>
+          <article class="paper-stat-card">
+            <p class="paper-stat-value">Method Sensitivity Matters</p>
+            <p class="paper-stat-label">GF performance depends on perturbation amplitude, sign, integration length,
+              and significance threshold choices.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <article class="research-detail">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="../research.html" class="breadcrumb-link">Back to Research</a>
+        </div>
+
+        <section class="content-section paper-summary-card">
+          <p class="paper-label">Paper Citation</p>
+          <p class="paper-citation">Zhang, B., M. Zhao, and Z. Tan, 2023: Using a Green’s Function Approach to
+            Diagnose the Pattern Effect in GFDL AM4 and CM4. <i>Journal of Climate</i>, 36, 1105-1124.
+            https://doi.org/10.1175/JCLI-D-22-0024.1</p>
+          <div class="paper-actions">
+            <a href="https://journals.ametsoc.org/view/journals/clim/36/4/JCLI-D-22-0024.1.xml" target="_blank"
+              rel="noopener" class="btn btn-primary">View Journal Article</a>
+            <a href="../documents/projects/sst-pattern-effect/zhang-et-al-2023-greens-function.pdf" target="_blank" rel="noopener"
+              class="btn btn-outline">Open PDF</a>
+            <a href="https://zenodo.org/record/7407417" target="_blank" rel="noopener" class="btn btn-outline">Data (Zenodo)</a>
+            <a href="https://github.com/bosongzhang/AM4_GF" target="_blank" rel="noopener" class="btn btn-outline">Code (GitHub)</a>
+          </div>
+        </section>
+
+        <section class="paper-grid">
+        <article class="paper-panel span-full scientific-logic-block">
+          <h2>Scientific Logic</h2>
+          <ul class="paper-list">
+            <li><strong>Question:</strong> How accurately can a Green’s-function framework reproduce pattern-effect radiative feedbacks in AM4/CM4?</li>
+            <li><strong>Method:</strong> Regional SST-patch perturbations used to build GF operators and reconstruct global/local responses under realistic SST-change patterns.</li>
+            <li><strong>Mechanism:</strong> Regional SST anomalies imprint distinct cloud and circulation responses that are approximately linear at broad scales but nonlinear in key tropical regimes.</li>
+            <li><strong>Main Findings:</strong> GF reconstructions capture major large-scale feedback structure and provide interpretable regional attribution, while highlighting tropical nonlinear error hotspots.</li>
+          </ul>
+        </article>
+          <article class="paper-panel">
+            <h2>Key Findings</h2>
+            <ul class="paper-list">
+              <li>GF operators reproduce key global-mean radiative-feedback responses to patterned SST change.</li>
+              <li>Regional attribution clarifies which SST anomaly locations dominate global response.</li>
+              <li>Largest reconstruction errors coincide with nonlinear tropical cloud-convection adjustments.</li>
+            </ul>
+          </article>
+
+          <article class="paper-panel">
+            <h2>Scientific Objective</h2>
+            <p>Diagnose and attribute the SST pattern effect by estimating how SST anomalies at each ocean grid point
+              contribute to global and local climate responses in AM4 and CM4 frameworks.</p>
+          </article>
+
+          <article class="paper-panel">
+            <h2>Approach</h2>
+            <ul class="paper-list">
+              <li>Build Jacobian-based Green’s functions from idealized SST patch perturbation experiments.</li>
+              <li>Reconstruct responses to historical-like and abrupt 4xCO2 SST patterns.</li>
+              <li>Evaluate sensitivity to perturbation amplitude/sign, integration duration, and significance filters.</li>
+            </ul>
+          </article>
+
+          <article class="paper-panel span-full">
+            <h2>Core Findings</h2>
+            <ul class="paper-list">
+              <li>GF reproduces much of AM4 global-mean and regional interannual response variability.</li>
+              <li>Magnitude biases are largest in CRE and shortwave/longwave cloud-mediated components.</li>
+              <li>Decomposing SST into global-mean warming plus anomalies reduces reconstruction biases.</li>
+              <li>Regional diagnostics (Nino3.4, AMO, IOD) show where GF skill is robust and where nonlinearity remains.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="content-section">
+          <h2>AM4 Reconstruction Diagnostics</h2>
+          <p class="paper-figure-note">Figures from Zhang et al. (2023), JCLI-D-22-0024.1.</p>
+          <div class="paper-figure-gallery">
+            <figure class="paper-figure-card span-full">
+              <p class="paper-figure-label">Figure 2</p>
+              <img src="../images/projects/sst-pattern-effect/green-function-2023-figure-2.jpg"
+                alt="Figure 2 comparing AM4 model and GF reconstructed global-mean diagnostics"
+                class="research-figure figure-wide">
+              <figcaption class="figure-caption">Global-mean model vs GF reconstruction for net radiation,
+                temperature, and radiative feedback under amip-piForcing and 4xCO2 forcing.</figcaption>
+            </figure>
+
+            <figure class="paper-figure-card">
+              <p class="paper-figure-label">Figure 3</p>
+              <img src="../images/projects/sst-pattern-effect/green-function-2023-figure-3.jpg"
+                alt="Figure 3 decomposition into clear-sky, CRE, LW and SW components"
+                class="research-figure figure-wide">
+              <figcaption class="figure-caption">Component-level diagnostics identify cloud-radiative terms as the
+                dominant source of magnitude bias in some scenarios.</figcaption>
+            </figure>
+
+            <figure class="paper-figure-card">
+              <p class="paper-figure-label">Figure 9</p>
+              <img src="../images/projects/sst-pattern-effect/green-function-2023-figure-9.jpg"
+                alt="Figure 9 sensitivity of reconstruction to perturbation amplitude and sign"
+                class="research-figure figure-wide">
+              <figcaption class="figure-caption">Sensitivity tests show how GF reconstruction varies with SST
+                perturbation amplitude and sign choices.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Regional Pattern-Effect Evaluation</h2>
+          <p class="paper-figure-note">Model-vs-GF regional comparisons for Nino3.4, AMO, and IOD SST patterns.</p>
+          <div class="paper-figure-gallery">
+            <figure class="paper-figure-card">
+              <p class="paper-figure-label">Figure 5</p>
+              <img src="../images/projects/sst-pattern-effect/green-function-2023-figure-5.jpg"
+                alt="Figure 5 net TOA radiation response patterns from model and GF"
+                class="research-figure figure-wide">
+              <figcaption class="figure-caption">Net TOA radiation patterns: GF captures core structures but shows
+                regional over/underestimation depending on forcing index.</figcaption>
+            </figure>
+
+            <figure class="paper-figure-card">
+              <p class="paper-figure-label">Figure 6</p>
+              <img src="../images/projects/sst-pattern-effect/green-function-2023-figure-6.jpg"
+                alt="Figure 6 surface air temperature response patterns from model and GF"
+                class="research-figure figure-wide">
+              <figcaption class="figure-caption">Near-surface temperature response patterns are broadly reproduced,
+                with improved large-scale agreement over ocean-dominated regions.</figcaption>
+            </figure>
+
+            <figure class="paper-figure-card span-full">
+              <p class="paper-figure-label">Figure 7</p>
+              <img src="../images/projects/sst-pattern-effect/green-function-2023-figure-7.jpg"
+                alt="Figure 7 precipitation response patterns from model and GF"
+                class="research-figure figure-wide">
+              <figcaption class="figure-caption">Precipitation responses are captured in key tropical sectors,
+                while off-basin and circulation-mediated regional details remain more challenging.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Pattern-Amplitude Dependence</h2>
+          <div class="paper-figure-gallery">
+            <figure class="paper-figure-card span-full">
+              <p class="paper-figure-label">Figure 8</p>
+              <img src="../images/projects/sst-pattern-effect/green-function-2023-figure-8.jpg"
+                alt="Figure 8 showing Green's function sensitivity to positive and negative SST perturbation amplitudes"
+                class="research-figure figure-wide">
+              <figcaption class="figure-caption">The derived Jacobian structure changes with perturbation amplitude,
+                demonstrating nontrivial state dependence in the pattern-effect framework.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <div class="text-center mt-4">
+          <a href="../research.html" class="btn btn-outline">Back to Research</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Bosong Zhang. Last updated: 03/03/2026</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

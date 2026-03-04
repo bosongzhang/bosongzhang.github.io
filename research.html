@@ -10,14 +10,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body class="research-page tesla-inspired">
 
   <!-- Header -->
   <header>
@@ -30,58 +30,102 @@
         <a href="index.html">Home</a>
         <a href="research.html" class="active">Research</a>
         <!-- <a href="publications.html">Publications</a> -->
-        <a href="contact_me.html">Contact</a>
+        <a href="contact-me.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- <section class="page-header">
-      <div class="container">
-        <h1>Research Projects</h1>
-        <p class="page-subtitle">
-          An overview of my current and past research investigations.
-        </p>
+    <section class="page-hero research-hero">
+      <div class="container page-hero-grid">
+        <div>
+          <p class="home-kicker">Research Portfolio</p>
+          <h1>Projects and Scientific Themes</h1>
+          <p class="page-subtitle">A curated overview of tropical dynamics, climate feedbacks, and model-development
+            research.</p>
+          <div class="tech-metrics">
+            <span class="tech-chip">Theme Blocks: 3</span>
+            <span class="tech-chip">Projects: 12+</span>
+            <span class="tech-chip">Methods: Observations + GCMs + ML</span>
+          </div>
+        </div>
+        <div class="research-theme-panel">
+          <p class="research-theme-panel-kicker">Theme Preview</p>
+          <div class="research-theme-preview-grid">
+            <article class="research-theme-preview-card">
+              <p class="research-theme-preview-tag">Tropical Cyclones</p>
+              <img src="images/projects/the-role-of-radiative-interactions-in-tropical-cyclone-development-under-realistic-boundary-conditions/jcli-2021-figure-3.png" alt="Tropical cyclones research preview figure"
+                class="research-theme-preview-image">
+            </article>
+            <article class="research-theme-preview-card">
+              <p class="research-theme-preview-tag">Forcing and Feedback</p>
+              <img src="images/projects/decoupling-land-surface-effects-from-co2-effective-radiative-forcing-in-a-climate-model/land-4xco2-figure-2.png" alt="Forcing and feedback research preview figure"
+                class="research-theme-preview-image">
+            </article>
+            <article class="research-theme-preview-card">
+              <p class="research-theme-preview-tag">Model Development and Evaluation</p>
+              <img src="images/projects/precipitation-diurnal-cycle/precipitation-diurnal-animation.gif" alt="Model development research preview figure"
+                class="research-theme-preview-image">
+            </article>
+          </div>
+        </div>
       </div>
-    </section> -->
+    </section>
 
     <div class="container">
       <div class="research-layout">
         <!-- Sidebar -->
         <aside class="research-sidebar">
           <h3 class="toc-title">Research Themes</h3>
-          <ul class="toc-list">
-            <li>
-              <a href="#theme-radiation" class="toc-link">Tropical Cyclones</a>
-              <ul class="toc-sublist">
-                <li><a href="radiation-convection-cyclones.html" class="toc-sublink">Radiative interactions associated
-                    with tropical cyclones</a></li>
-                <li><a href="tropopause_cyclones.html" class="toc-sublink">Tropopause Temperature Biases on
-                    tropical cyclones</a></li>
-                <li><a href="efficacy_TC.html" class="toc-sublink">Efficacy of tropical cyclones</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#theme-sst" class="toc-link">Forcing and Feedback</a>
-              <ul class="toc-sublist">
-                <li><a href="climate-sensitivity.html" class="toc-sublink">Radiative Feedbacks</a></li>
-                <li><a href="sst-pattern-effect.html#am4" class="toc-sublink">SST patch in AM4</a></li>
-                <li><a href="sst-pattern-effect.html#intermodel" class="toc-sublink">SST patch intermodel comparison</a>
-                </li>
-                <li><a href="quan_2025.html" class="toc-sublink">SST pattern and aggregation</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#theme-model" class="toc-link">Model Development and Evaluation</a>
-              <ul class="toc-sublist">
-                <li><a href="emulators.html" class="toc-sublink">Climate Emulators</a></li>
-                <li><a href="precipitation-diurnal-cycle.html" class="toc-sublink">Precipitation Diurnal Cycle</a></li>
-                <li><a href="precipitation-projection-uncertainty.html" class="toc-sublink">Precipitation Projection
-                    Uncertainty</a></li>
-                <li><a href="precipitation-trend.html" class="toc-sublink">Precipitation Trend</a></li>
-              </ul>
-            </li>
-          </ul>
+          <div class="theme-menu-group is-open" data-theme-group="theme-radiation">
+            <button class="theme-menu-button toc-link is-active" type="button" data-theme-target="theme-radiation"
+              aria-controls="theme-radiation-menu" aria-expanded="true">
+              <span>Tropical Cyclones</span>
+              <span class="theme-menu-caret" aria-hidden="true">▾</span>
+            </button>
+            <ul id="theme-radiation-menu" class="toc-sublist theme-menu-panel">
+              <li><a href="projects/the-role-of-radiative-interactions-in-tropical-cyclone-development-under-realistic-boundary-conditions.html"
+                  class="toc-sublink">Radiative Interactions in TC Development</a></li>
+              <li><a href="projects/a-vertically-resolved-analysis-of-radiative-feedbacks-on-moist-static-energy-variance-in-tropical-cyclones.html"
+                  class="toc-sublink">Vertical Radiative Feedbacks in TCs</a></li>
+              <li><a href="projects/the-influence-of-tropopause-temperature-biases-on-climate-model-simulations-of-tropical-cyclones.html"
+                  class="toc-sublink">Tropopause Biases in TC Simulations</a></li>
+              <li><a href="projects/jcli-d-25-0570.html" class="toc-sublink">Efficacy and TC Intensification</a></li>
+              <li><a href="projects/convective-aggregation-james-2021.html" class="toc-sublink">Convective Aggregation and Extremes</a></li>
+              <li><a href="projects/hsieh-2024-tc-climate-sensitivity.html" class="toc-sublink">TC Seeds and Climate Sensitivity</a></li>
+            </ul>
+          </div>
+
+          <div class="theme-menu-group" data-theme-group="theme-sst">
+            <button class="theme-menu-button toc-link" type="button" data-theme-target="theme-sst"
+              aria-controls="theme-sst-menu" aria-expanded="false">
+              <span>Forcing and Feedback</span>
+              <span class="theme-menu-caret" aria-hidden="true">▾</span>
+            </button>
+            <ul id="theme-sst-menu" class="toc-sublist theme-menu-panel" hidden>
+              <li><a href="projects/climate-sensitivity.html" class="toc-sublink">Meridional Forcing and Sensitivity</a></li>
+              <li><a href="projects/liu-et-al-2021-ncc.html" class="toc-sublink">Hydrological Cycle and Ocean Heat Uptake</a></li>
+              <li><a href="projects/decoupling-land-surface-effects-from-co2-effective-radiative-forcing-in-a-climate-model.html" class="toc-sublink">Land Effects on CO2 ERF</a></li>
+              <li><a href="projects/sst-pattern-effect.html" class="toc-sublink">Green's Function in AM4/CM4</a></li>
+              <li><a href="projects/quan-2025.html" class="toc-sublink">SST Pattern Effect on OLR</a></li>
+              <li><a href="projects/quan-2024-sst-additivity.html" class="toc-sublink">SST Additivity and Nonlinearity</a></li>
+            </ul>
+          </div>
+
+          <div class="theme-menu-group" data-theme-group="theme-model">
+            <button class="theme-menu-button toc-link" type="button" data-theme-target="theme-model"
+              aria-controls="theme-model-menu" aria-expanded="false">
+              <span>Model Development and Evaluation</span>
+              <span class="theme-menu-caret" aria-hidden="true">▾</span>
+            </button>
+            <ul id="theme-model-menu" class="toc-sublist theme-menu-panel" hidden>
+              <li><a href="projects/gfmip-protocol.html" class="toc-sublink">GFMIP Protocol</a></li>
+              <li><a href="projects/emulators.html" class="toc-sublink">Climate Emulators</a></li>
+              <li><a href="projects/precipitation-diurnal-cycle.html" class="toc-sublink">Precipitation Diurnal Cycle</a></li>
+              <li><a href="projects/precipitation-projection-uncertainty.html" class="toc-sublink">Precipitation Projection Uncertainty</a></li>
+              <li><a href="projects/precipitation-trend.html" class="toc-sublink">Precipitation Trend</a></li>
+            </ul>
+          </div>
         </aside>
 
         <!-- Main Content -->
@@ -90,45 +134,99 @@
           <!-- Theme 1: Tropical Cyclones -->
           <section id="theme-radiation" class="research-theme theme-radiation">
             <h2 class="theme-title">Tropical Cyclones</h2>
+            <div class="theme-intro-row">
+              <div class="theme-intro-copy">
+                <p class="theme-intro-kicker">Overview</p>
+                <p class="theme-intro-text">Process-focused work on tropical cyclone genesis, intensity, and frequency
+                  response, emphasizing radiation-convection coupling, upper-atmosphere controls, and warming-climate
+                  amplification mechanisms.</p>
+              </div>
+              <div class="theme-intro-metrics">
+                <span class="theme-metric-chip">TC-Permitting GCMs</span>
+                <span class="theme-metric-chip">Energy + PI Diagnostics</span>
+                <span class="theme-metric-chip">Frequency + ACE + Intensity</span>
+              </div>
+            </div>
             <div class="card-grid">
 
               <!-- Project: Radiation-Convection Interactions -->
               <article class="card">
                 <div class="card-image">
-                  <img src="images/full-JCLI-D-22-0199.1-f1.jpg" alt="Radiation-Convection Interactions">
+                  <img src="images/projects/the-role-of-radiative-interactions-in-tropical-cyclone-development-under-realistic-boundary-conditions/jcli-2021-figure-3.png" alt="Radiation-Convection Interactions">
                 </div>
                 <div class="card-content">
-                  <h2 class="card-title"><a href="radiation-convection-cyclones.html">Radiative interactions associated
-                      with tropical cyclones</a></h2>
-                  <p class="card-text">Exploring the coupling between atmospheric radiation and convective processes in
-                    tropical cyclones.</p>
-                  <a href="radiation-convection-cyclones.html" class="card-link">Read More</a>
+                  <h2 class="card-title"><a
+                      href="projects/the-role-of-radiative-interactions-in-tropical-cyclone-development-under-realistic-boundary-conditions.html">The
+                      Role of Radiative Interactions in TC Development</a></h2>
+                  <p class="card-text">Journal of Climate (2021): radiative interaction controls on TC genesis,
+                    frequency, and storm duration.</p>
+                  <a href="projects/the-role-of-radiative-interactions-in-tropical-cyclone-development-under-realistic-boundary-conditions.html" class="card-link">Read More</a>
                 </div>
               </article>
 
               <!-- Project: Tropopause Temperature Biases -->
               <article class="card">
                 <div class="card-image">
-                  <img src="images/tropopause_fig1.png" alt="Tropopause Temperature Biases">
+                  <img src="images/projects/a-vertically-resolved-analysis-of-radiative-feedbacks-on-moist-static-energy-variance-in-tropical-cyclones/jcli-2023-vertical-figure-1.png" alt="Vertically resolved radiative feedbacks">
                 </div>
                 <div class="card-content">
-                  <h2 class="card-title"><a href="tropopause_cyclones.html">Tropopause Temperature Biases on tropical
-                      cyclones</a></h2>
-                  <p class="card-text">Examining the role of tropopause temperature biases on the development of
-                    Tropical Cyclones.</p>
-                  <a href="tropopause_cyclones.html" class="card-link">Read More</a>
+                  <h2 class="card-title"><a
+                      href="projects/a-vertically-resolved-analysis-of-radiative-feedbacks-on-moist-static-energy-variance-in-tropical-cyclones.html">A
+                      Vertically Resolved Analysis of Radiative Feedbacks in TCs</a></h2>
+                  <p class="card-text">Journal of Climate (2023): vertical-process decomposition of radiative
+                    feedbacks and moist static energy variance in TCs.</p>
+                  <a href="projects/a-vertically-resolved-analysis-of-radiative-feedbacks-on-moist-static-energy-variance-in-tropical-cyclones.html" class="card-link">Read More</a>
+                </div>
+              </article>
+
+              <!-- Project: Tropopause Temperature Biases -->
+              <article class="card">
+                <div class="card-image">
+                  <img src="images/shared/tropopause-bias-figure-1.png" alt="Tropopause Temperature Biases">
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title"><a
+                      href="projects/the-influence-of-tropopause-temperature-biases-on-climate-model-simulations-of-tropical-cyclones.html">The
+                      Influence of Tropopause Temperature Biases on TC Simulations</a></h2>
+                  <p class="card-text">Geophysical Research Letters (2026): upper-atmosphere bias controls on potential
+                    intensity, TC frequency, and ACE.</p>
+                  <a href="projects/the-influence-of-tropopause-temperature-biases-on-climate-model-simulations-of-tropical-cyclones.html" class="card-link">Read More</a>
                 </div>
               </article>
 
               <!-- Project: Efficacy -->
               <article class="card">
                 <div class="card-image">
-                  <img src="images/efficacy_TC_1.png" alt="efficacy of tropical cyclones">
+                  <img src="images/shared/tc-efficacy-figure-1.png" alt="efficacy of tropical cyclones">
                 </div>
                 <div class="card-content">
-                  <h2 class="card-title"><a href="efficacy_TC.html">Efficacy of Tropical Cyclones</a></h2>
-                  <p class="card-text">Efficacy of Tropical Cyclones in a warming world</p>
-                  <a href="efficacy_TC.html" class="card-link">Read More</a>
+                  <h2 class="card-title"><a href="projects/jcli-d-25-0570.html">Efficacy and TC Intensification in Warmer Climates</a></h2>
+                  <p class="card-text">Journal of Climate manuscript draft (JCLI-D-25-0570): efficacy-driven amplification of TC intensification.</p>
+                  <a href="projects/jcli-d-25-0570.html" class="card-link">Read More</a>
+                </div>
+              </article>
+
+              <!-- Project: Convective Aggregation -->
+              <article class="card">
+                <div class="card-image">
+                  <img src="images/projects/convective-aggregation-james-2021/convective-aggregation-figure-1.jpg" alt="Convective aggregation and tropical extremes">
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title"><a href="projects/convective-aggregation-james-2021.html">Convective Aggregation and Tropical Extremes</a></h2>
+                  <p class="card-text">JAMES (2021): suppressing synoptic-scale radiative coupling weakens aggregation and reduces extreme tropical precipitation.</p>
+                  <a href="projects/convective-aggregation-james-2021.html" class="card-link">Read More</a>
+                </div>
+              </article>
+
+              <!-- Project: TC seeds and climate sensitivity -->
+              <article class="card">
+                <div class="card-image">
+                  <img src="images/projects/hsieh-2024-tc-climate-sensitivity/hsieh-2024-figure-1.jpg" alt="TC seeds and climate sensitivity">
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title"><a href="projects/hsieh-2024-tc-climate-sensitivity.html">TC Seeds and Climate Sensitivity</a></h2>
+                  <p class="card-text">Science Advances (2024): tropical cloud-feedback uncertainty links ECS spread with TC seed and frequency response.</p>
+                  <a href="projects/hsieh-2024-tc-climate-sensitivity.html" class="card-link">Read More</a>
                 </div>
               </article>
 
@@ -138,57 +236,93 @@
           <!-- Theme 2: Forcing and Feedback -->
           <section id="theme-sst" class="research-theme theme-sst">
             <h2 class="theme-title">Forcing and Feedback</h2>
+            <div class="theme-intro-row">
+              <div class="theme-intro-copy">
+                <p class="theme-intro-kicker">Overview</p>
+                <p class="theme-intro-text">Research on radiative feedback structure and pattern effects, including
+                  meridional forcing efficacy, land-mediated ERF adjustments, and Green's-function analysis of
+                  SST-driven longwave and shortwave responses.</p>
+              </div>
+              <div class="theme-intro-metrics">
+                <span class="theme-metric-chip">Pattern Effect</span>
+                <span class="theme-metric-chip">ERF Decomposition</span>
+                <span class="theme-metric-chip">CMIP + AM4/CM4 Tests</span>
+              </div>
+            </div>
             <div class="card-grid">
 
               <!-- Project: Radiative Feedbacks -->
               <article class="card">
                 <div class="card-image">
-                  <img src="images/fig1.png" alt="Radiative Feedbacks">
+                  <img src="images/shared/meridional-forcing-figure-1.png" alt="Meridional forcing and climate sensitivity">
                 </div>
                 <div class="card-content">
-                  <h2 class="card-title"><a href="climate-sensitivity.html">Radiative Feedbacks</a></h2>
-                  <p class="card-text">Understanding the mechanisms behind cloud feedbacks and their impact on climate
-                    sensitivity.</p>
-                  <a href="climate-sensitivity.html" class="card-link">Read More</a>
+                  <h2 class="card-title"><a href="projects/climate-sensitivity.html">Meridional Forcing and Sensitivity</a></h2>
+                  <p class="card-text">How the latitude of imposed radiative forcing changes feedback structure and
+                    effective climate sensitivity.</p>
+                  <a href="projects/climate-sensitivity.html" class="card-link">Read More</a>
                 </div>
               </article>
 
-              <!-- Project: SST patch in AM4 -->
+              <!-- Project: Hydrological cycle and ocean heat uptake -->
               <article class="card">
                 <div class="card-image">
-                  <img src="images/gf.sensitivity.png" alt="SST patch in AM4">
+                  <img src="images/projects/liu-et-al-2021-ncc/liu-2021-ncc-figure-2.jpg" alt="Hydrological cycle and ocean heat uptake">
                 </div>
                 <div class="card-content">
-                  <h2 class="card-title"><a href="sst-pattern-effect.html#am4">SST patch in AM4</a></h2>
-                  <p class="card-text">Diagnosing the pattern effect in GFDL AM4 using a Green's Function approach.</p>
-                  <a href="sst-pattern-effect.html#am4" class="card-link">Read More</a>
+                  <h2 class="card-title"><a href="projects/liu-et-al-2021-ncc.html">Hydrological Cycle and Ocean Heat Uptake</a></h2>
+                  <p class="card-text">Nature Climate Change (2021): salinity-pattern amplification enhances ocean heat uptake and moderates transient warming.</p>
+                  <a href="projects/liu-et-al-2021-ncc.html" class="card-link">Read More</a>
                 </div>
               </article>
 
-              <!-- Project: SST patch intermodel comparison -->
+              <!-- Project: Land effects on CO2 ERF -->
               <article class="card">
                 <div class="card-image">
-                  <img src="images/jame22028-fig-0002-m.jpg" alt="SST patch intermodel comparison">
+                  <img src="images/projects/decoupling-land-surface-effects-from-co2-effective-radiative-forcing-in-a-climate-model/land-4xco2-figure-2.png" alt="Land effects on CO2 effective radiative forcing">
                 </div>
                 <div class="card-content">
-                  <h2 class="card-title"><a href="sst-pattern-effect.html#intermodel">SST patch intermodel
-                      comparison</a></h2>
-                  <p class="card-text">Comparing the Green's Function derived pattern effect across different climate
-                    models.</p>
-                  <a href="sst-pattern-effect.html#intermodel" class="card-link">Read More</a>
+                  <h2 class="card-title"><a href="projects/decoupling-land-surface-effects-from-co2-effective-radiative-forcing-in-a-climate-model.html">Land Effects on CO2 ERF</a></h2>
+                  <p class="card-text">Land temperature and soil-moisture constraints shift fixed-SST 4xCO2 ERF and radiative-adjustment structure in AM4.</p>
+                  <a href="projects/decoupling-land-surface-effects-from-co2-effective-radiative-forcing-in-a-climate-model.html" class="card-link">Read More</a>
                 </div>
               </article>
 
-              <!-- Project: SST pattern and aggregation -->
+              <!-- Project: Green's Function in AM4/CM4 -->
               <article class="card">
                 <div class="card-image">
-                  <img src="images/gf.sensitivity.png" alt="SST pattern and aggregation">
+                  <img src="images/shared/green-function-sensitivity.png" alt="Green's Function in AM4/CM4">
                 </div>
                 <div class="card-content">
-                  <h2 class="card-title"><a href="quan_2025.html">SST pattern and aggregation</a></h2>
-                  <p class="card-text">Non-linear radiative response to patterned global warming due to convection
-                    aggregation.</p>
-                  <a href="quan_2025.html" class="card-link">Read More</a>
+                  <h2 class="card-title"><a href="projects/sst-pattern-effect.html">Green's Function in AM4/CM4</a></h2>
+                  <p class="card-text">Using a Green's function framework to diagnose SST-pattern effects on radiative
+                    feedbacks in GFDL AM4 and CM4.</p>
+                  <a href="projects/sst-pattern-effect.html" class="card-link">Read More</a>
+                </div>
+              </article>
+
+              <!-- Project: SST pattern effect on OLR -->
+              <article class="card">
+                <div class="card-image">
+                  <img src="images/projects/quan-2025/quan-2025-figure-2.png" alt="SST pattern effect on OLR">
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title"><a href="projects/quan-2025.html">SST Pattern Effect on OLR</a></h2>
+                  <p class="card-text">Large-scale convective aggregation links tropical SST gradients to longwave
+                    and shortwave radiative responses.</p>
+                  <a href="projects/quan-2025.html" class="card-link">Read More</a>
+                </div>
+              </article>
+
+              <!-- Project: SST additivity and nonlinear dynamics -->
+              <article class="card">
+                <div class="card-image">
+                  <img src="images/projects/quan-2024-sst-additivity/quan-2024-additivity-figure-2.jpg" alt="SST additivity and nonlinear tropical dynamics">
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title"><a href="projects/quan-2024-sst-additivity.html">SST Additivity and Nonlinear Dynamics</a></h2>
+                  <p class="card-text">Journal of Climate (2024): why Green's-function superposition can overestimate radiative responses under large patterned SST warming.</p>
+                  <a href="projects/quan-2024-sst-additivity.html" class="card-link">Read More</a>
                 </div>
               </article>
 
@@ -198,56 +332,82 @@
           <!-- Theme 3: Model Development and Evaluation -->
           <section id="theme-model" class="research-theme theme-model">
             <h2 class="theme-title">Model Development and Evaluation</h2>
+            <div class="theme-intro-row">
+              <div class="theme-intro-copy">
+                <p class="theme-intro-kicker">Overview</p>
+                <p class="theme-intro-text">Method-development efforts spanning coordinated experiment protocols,
+                  emulator evaluation, and precipitation-process benchmarking to diagnose model behavior and improve
+                  projection credibility.</p>
+              </div>
+              <div class="theme-intro-metrics">
+                <span class="theme-metric-chip">Protocol Design</span>
+                <span class="theme-metric-chip">ML Climate Emulators</span>
+                <span class="theme-metric-chip">Process-Level Evaluation</span>
+              </div>
+            </div>
             <div class="card-grid">
+
+              <!-- Project: GFMIP Protocol -->
+              <article class="card">
+                <div class="card-image">
+                  <img src="images/shared/jame-22028-figure-2.jpg" alt="GFMIP Protocol">
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title"><a href="projects/gfmip-protocol.html">GFMIP Protocol</a></h2>
+                  <p class="card-text">A coordinated protocol to diagnose and compare atmospheric Green's functions
+                    across models.</p>
+                  <a href="projects/gfmip-protocol.html" class="card-link">Read More</a>
+                </div>
+              </article>
 
               <!-- Project: ClimateEmulators -->
               <article class="card">
                 <div class="card-image">
-                  <img src="images/mean_t_ref_comparison_individual_cbars.png" alt="ClimateEmulators">
+                  <img src="images/projects/emulators/emulator-mean-temperature-comparison.png" alt="ClimateEmulators">
                 </div>
                 <div class="card-content">
-                  <h2 class="card-title"><a href="emulators.html">Climate Emulators</a></h2>
+                  <h2 class="card-title"><a href="projects/emulators.html">Climate Emulators</a></h2>
                   <p class="card-text">Overview: we examine climate emulators and out-of-sample predictions.</p>
-                  <a href="emulators.html" class="card-link">Read More</a>
+                  <a href="projects/emulators.html" class="card-link">Read More</a>
                 </div>
               </article>
 
               <!-- Project: Precipitation Diurnal Cycle -->
               <article class="card">
                 <div class="card-image">
-                  <img src="images/animation1.gif" alt="Precipitation Diurnal Cycle">
+                  <img src="images/projects/precipitation-diurnal-cycle/precipitation-diurnal-animation.gif" alt="Precipitation Diurnal Cycle">
                 </div>
                 <div class="card-content">
-                  <h2 class="card-title"><a href="precipitation-diurnal-cycle.html">Precipitation Diurnal Cycle</a></h2>
+                  <h2 class="card-title"><a href="projects/precipitation-diurnal-cycle.html">Precipitation Diurnal Cycle</a></h2>
                   <p class="card-text">Investigating how climate models simulate the daily cycle of rainfall and
                     identifying biases.</p>
-                  <a href="precipitation-diurnal-cycle.html" class="card-link">Read More</a>
+                  <a href="projects/precipitation-diurnal-cycle.html" class="card-link">Read More</a>
                 </div>
               </article>
 
               <!-- Project: Precipitation Projection Uncertainty -->
               <article class="card">
                 <div class="card-image">
-                  <img src="images/p_figure2_scatter.png" alt="Precipitation Projection Uncertainty">
+                  <img src="images/projects/precipitation-projection-uncertainty/precipitation-uncertainty-scatter-figure-2.png" alt="Precipitation Projection Uncertainty">
                 </div>
                 <div class="card-content">
-                  <h2 class="card-title"><a href="precipitation-projection-uncertainty.html">Precipitation Projection
+                  <h2 class="card-title"><a href="projects/precipitation-projection-uncertainty.html">Precipitation Projection
                       Uncertainty</a></h2>
                   <p class="card-text">Examining how precipitation patterns are expected to evolve in a warming climate.
                   </p>
-                  <a href="precipitation-projection-uncertainty.html" class="card-link">Read More</a>
+                  <a href="projects/precipitation-projection-uncertainty.html" class="card-link">Read More</a>
                 </div>
               </article>
 
               <!-- Project: Precipitation Trend -->
               <article class="card">
                 <div class="card-image">
-                  <img src="images/liang2025_pr_trend.png" alt="Precipitation Trend">
+                  <img src="images/projects/precipitation-trend/liang-2025-precipitation-trend.png" alt="Precipitation Trend">
                 </div>
                 <div class="card-content">
-                  <h2 class="card-title"><a href="precipitation-trend.html">Precipitation Trend</a></h2>
+                  <h2 class="card-title"><a href="projects/precipitation-trend.html">Precipitation Trend</a></h2>
                   <p class="card-text">Investigating trends in precipitation patterns.</p>
-                  <a href="precipitation-trend.html" class="card-link">Read More</a>
+                  <a href="projects/precipitation-trend.html" class="card-link">Read More</a>
                 </div>
               </article>
 
@@ -262,7 +422,7 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Bosong Zhang. Last updated: 08/22/2025</p>
+      <p>&copy; 2026 Bosong Zhang. Last updated: 03/03/2026</p>
     </div>
   </footer>
 

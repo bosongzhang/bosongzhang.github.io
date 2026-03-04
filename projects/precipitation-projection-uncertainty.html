@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uncertainty in Model Projections of Precipitation Change | Bosong Zhang</title>
+  <meta name="description"
+    content="Assessment of uncertainty in projected precipitation change and the limits of bias-correction constraints.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="paper-page tc-overhaul-page quan-olr-page tesla-inspired">
+
+  <header>
+    <div class="container header-inner">
+      <h1 class="site-title"><a href="../index.html">Bosong Zhang</a></h1>
+
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+      <nav class="main-nav">
+        <a href="../index.html">Home</a>
+        <a href="../research.html" class="active">Research</a>
+        <a href="../contact-me.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="paper-hero">
+      <div class="container paper-hero-grid">
+        <div class="paper-hero-copy">
+          <p class="paper-hero-kicker">Model Development and Evaluation</p>
+          <h1>Uncertainty in Model Projections of Precipitation Change</h1>
+          <p class="paper-hero-subtitle">Downscaling improves present-day bias but does not reduce intermodel spread in projected rainfall change because projection spread is tied to climatological-structure dependence.</p>
+          <div class="paper-hero-metrics">
+            <span class="paper-hero-chip">Intermodel Spread</span>
+            <span class="paper-hero-chip">Bias Correction</span>
+            <span class="paper-hero-chip">Model Screening Constraint</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="paper-stat-strip">
+      <div class="container">
+        <div class="paper-stat-grid">
+          <article class="paper-stat-card">
+            <p class="paper-stat-value">~0.10</p>
+            <p class="paper-stat-label">Area-mean intermodel spread in dlnP remains nearly unchanged with BCSD</p>
+          </article>
+          <article class="paper-stat-card">
+            <p class="paper-stat-value">16-20%</p>
+            <p class="paper-stat-label">Spread reduction from simple model screening across downscaling products</p>
+          </article>
+          <article class="paper-stat-card">
+            <p class="paper-stat-value">GRL (2019)</p>
+            <p class="paper-stat-label">Constraining climate model projections of regional precipitation change</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <article class="research-detail">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="../research.html" class="breadcrumb-link">Back to Research</a>
+        </div>
+
+        <section class="content-section paper-summary-card">
+          <p class="paper-label">Paper Citation</p>
+          <p class="paper-citation">Zhang, B., and B. J. Soden, 2019: Constraining Climate Model Projections of
+            Regional Precipitation Change. <i>Geophysical Research Letters</i>, 46, 10,522-10,531.
+            https://doi.org/10.1029/2019GL083926</p>
+          <div class="paper-actions">
+            <a href="https://doi.org/10.1029/2019GL083926" target="_blank" rel="noopener"
+              class="btn btn-primary">View Journal Article</a>
+            <a href="../documents/projects/precipitation-projection-uncertainty/zhang-and-soden-2019-grl.pdf" target="_blank" rel="noopener"
+              class="btn btn-outline">Open PDF</a>
+          </div>
+        </section>
+
+        <section class="paper-grid">
+        <article class="paper-panel span-full scientific-logic-block">
+          <h2>Scientific Logic</h2>
+          <ul class="paper-list">
+            <li><strong>Question:</strong> Does statistical downscaling reduce intermodel spread in future precipitation projections?</li>
+            <li><strong>Method:</strong> Comparison of downscaled land rainfall across models, relating projected change spread to baseline climatological rainfall structure.</li>
+            <li><strong>Mechanism:</strong> Projection spread is tied to physically meaningful climatology-change relationships, not only removable mean-state bias.</li>
+            <li><strong>Main Findings:</strong> Bias correction improves historical fit but does not materially narrow future spread, so uncertainty reduction requires process constraints beyond statistical correction.</li>
+          </ul>
+        </article>
+
+          <article class="paper-panel">
+            <h2>Scientific Question</h2>
+            <p>Do statistical downscaling and bias correction reduce uncertainty in future regional precipitation
+              projections, and if not, can present-climate model performance be used to constrain that spread?</p>
+          </article>
+
+          <article class="paper-panel">
+            <h2>Approach</h2>
+            <ul class="paper-list">
+              <li>Analyze CMIP5 land precipitation with BCSD and SD_noBC products (plus BCCA/LOCA over CONUS).</li>
+              <li>Compare historical climatology (1986-2005) with late-century RCP4.5 projections (2080-2099).</li>
+              <li>Use fractional change dlnP and intermodel spread sigma(dlnP) to evaluate uncertainty reduction.</li>
+            </ul>
+          </article>
+
+          <article class="paper-panel span-full">
+            <h2>Key Findings</h2>
+            <ul class="paper-list">
+              <li>Bias correction materially improves historical rainfall fields.</li>
+              <li>Future projection uncertainty remains large after downscaling due to structural climatology-change coupling.</li>
+              <li>Uncertainty reduction needs process constraints, not statistical correction alone.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="content-section">
+          <h2>Figure from the Study</h2>
+          <div class="paper-figure-gallery">
+            <figure class="paper-figure-card span-full">
+              <p class="paper-figure-label">Intermodel Dependence and Spread</p>
+              <img src="../images/projects/precipitation-projection-uncertainty/precipitation-uncertainty-scatter-figure-2.png" alt="Cross-model correlation between climatology and projected precipitation change"
+                class="research-figure figure-wide">
+              <figcaption class="figure-caption">Cross-model relationship showing that projected precipitation change
+                depends strongly on climatological rainfall structure; this dependence explains why bias correction
+                alone does not collapse projection spread.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <div class="text-center mt-4">
+          <a href="../research.html" class="btn btn-outline">Back to Research</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Bosong Zhang. Last updated: 03/04/2026</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
